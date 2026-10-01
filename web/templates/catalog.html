@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Catalog - BLOXEN{% endblock %}
+{% block content %}
+<div class="container-main" style="max-width:970px; margin: 70px auto 0; font-family:'Source Sans Pro',sans-serif;">
+    <div style="border:1px solid #ccc; border-radius:4px;">
+        <div style="background:#f8f8f8; border-bottom:1px solid #ccc; padding:8px 12px; font-size:16px; font-weight:600;">
+            Catalog
+            <span class="bloxen-provenance-tag">historically evidenced items only</span>
+        </div>
+        <div style="padding:8px 12px; border-bottom:1px solid #eee; font-size:12px;">
+            {% for c in categories %}
+            <a href="/catalog?category={{ c }}" style="margin-right:12px; color:{% if c == category %}#c8201a; font-weight:600{% else %}#0055b3{% endif %};">{{ c }}</a>
+            {% endfor %}
+        </div>
+        <div style="padding:12px;" class="bloxen-grid">
+            {% for item in items %}
+            <div class="bloxen-card">
+                <a class="thumb" href="/catalog/item.aspx?ID={{ item.historical_asset_id }}">
+                    {% if item.thumbnail_path %}<img src="{{ item.thumbnail_path }}" alt="{{ item.name }}" />{% else %}<div class="bloxen-thumb-missing" style="height:100%">thumb MISSING</div>{% endif %}
+                </a>
+                <a class="title" href="/catalog/item.aspx?ID={{ item.historical_asset_id }}">{{ item.name }}</a>
+                <div class="price">
+                    {% if item.price_robux %}R$ {{ item.price_robux }}
+                    {% elif item.price_tix %}T$ {{ item.price_tix }}
+                    {% else %}Free{% endif %}
+                </div>
+            </div>
+            {% endfor %}
+            <div class="bloxen-clear"></div>
+        </div>
+    </div>
+</div>
+{% endblock %}

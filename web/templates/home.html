@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+{% block title %}BLOXEN{% endblock %}
+{% block content %}
+<div class="container-main" style="max-width:970px; margin: 70px auto 0; font-family:'Source Sans Pro',sans-serif;">
+{% if user %}
+    <h2 style="font-size:22px; color:#393939;">Hello, {{ user.username }}!</h2>
+    <div style="display:flex; gap:16px; flex-wrap:wrap;">
+        <div style="width:610px; min-width:320px;">
+            <div class="rbx-header" style="border:1px solid #ccc; border-radius:4px; margin-bottom:14px;">
+                <div style="background:#f8f8f8; border-bottom:1px solid #ccc; padding:6px 10px; font-size:14px; font-weight:600;">
+                    Games <a href="/games" style="font-size:11px; font-weight:400; float:right;">See All &gt;</a>
+                </div>
+                <div style="padding:10px;" class="bloxen-grid">
+                    {% for g in games %}
+                    <div class="bloxen-card">
+                        <a class="thumb" href="/games/{{ g.id }}/{{ g.slug }}">
+                            {% if g.thumbnail_path %}<img src="{{ g.thumbnail_path }}" alt="{{ g.name }}" />{% else %}<div class="bloxen-thumb-missing" style="height:100%">thumbnail<br>MISSING</div>{% endif %}
+                        </a>
+                        <a class="title" href="/games/{{ g.id }}/{{ g.slug }}">{{ g.name }}</a>
+                        <div class="meta">by {{ g.creator }}</div>
+                    </div>
+                    {% endfor %}
+                    <div class="bloxen-clear"></div>
+                </div>
+            </div>
+            <div style="border:1px solid #ccc; border-radius:4px;">
+                <div style="background:#f8f8f8; border-bottom:1px solid #ccc; padding:6px 10px; font-size:14px; font-weight:600;">
+                    Recent <a href="/games" style="font-size:11px; font-weight:400; float:right;">See All &gt;</a>
+                </div>
+                <div style="padding:10px;">
+                {% if recent %}
+                    {% for r in recent %}
+                    <div class="bloxen-item-row"><a href="/games/{{ r.game.id }}/{{ r.game.slug }}">{{ r.game.name }}</a>
+                        <span style="float:right; color:#999;">{{ r.played_at }}</span></div>
+                    {% endfor %}
+                {% else %}
+                    <div style="color:#999; font-size:12px; padding:8px 0;">You have not visited any games yet.</div>
+                {% endif %}
+                </div>
+            </div>
+        </div>
+        <div style="width:300px; min-width:280px;">
+            <div style="border:1px solid #ccc; border-radius:4px; margin-bottom:14px;">
+                <div style="padding:10px; text-align:center;">
+                    {% if avatar_thumb %}
+                    <img src="{{ avatar_thumb }}" width="120" height="120" alt="avatar" style="border:1px solid #ddd;" />
+                    {% else %}
+                    <div class="bloxen-thumb-missing" style="width:120px; height:120px; margin:0 auto; line-height:120px;">avatar</div>
+                    {% endif %}
+                    <div style="margin-top:8px; font-size:14px;"><a href="/User.aspx?id={{ user.id }}">{{ user.username }}</a></div>
+                    <div style="margin-top:6px;">
+                        <a class="rbx-btn" style="display:inline-block; padding:4px 12px; border:1px solid #aaa; border-radius:3px; font-size:12px; text-decoration:none; color:#333; background:linear-gradient(#fff,#eee);" href="/My/Character.aspx">Character</a>
+                    </div>
+                </div>
+            </div>
+            <div style="border:1px solid #ccc; border-radius:4px;">
+                <div style="background:#f8f8f8; border-bottom:1px solid #ccc; padding:6px 10px; font-size:14px; font-weight:600;">Friends</div>
+                <div style="padding:8px 10px;">
+                {% for f in friends %}
+                    <div class="bloxen-item-row"><a href="/User.aspx?id={{ f.id }}">{{ f.username }}</a></div>
+                {% else %}
+                    <div style="color:#999; font-size:12px;">No friends yet.</div>
+                {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% else %}
+    <div style="border:1px solid #ccc; border-radius:4px; background:#f8f8f8; padding:18px; margin-bottom:16px;">
+        <h2 style="margin:0 0 6px; font-size:24px; color:#393939;">BLOXEN</h2>
+        <p style="margin:0 0 12px; font-size:13px; color:#555; max-width:640px;">
+            An unofficial preservation reconstruction of the July&nbsp;2015 Roblox experience:
+            historical website, catalog, avatar, preserved games and the reviewed
+            0.205.0.61876 Windows client path. Not affiliated with Roblox Corporation.
+        </p>
+        <a class="rbx-btn" style="display:inline-block; padding:6px 18px; border:1px solid #aaa; border-radius:4px; font-size:14px; text-decoration:none; color:#fff; background:linear-gradient(#e2231a,#c8201a);" href="/Register.aspx">Sign Up</a>
+        <a class="rbx-btn" style="display:inline-block; margin-left:8px; padding:6px 18px; border:1px solid #aaa; border-radius:4px; font-size:14px; text-decoration:none; color:#333; background:linear-gradient(#fff,#eee);" href="/Login.aspx">Log In</a>
+    </div>
+    <div style="border:1px solid #ccc; border-radius:4px;">
+        <div style="background:#f8f8f8; border-bottom:1px solid #ccc; padding:6px 10px; font-size:14px; font-weight:600;">
+            Games <a href="/games" style="font-size:11px; font-weight:400; float:right;">See All &gt;</a>
+        </div>
+        <div style="padding:10px;" class="bloxen-grid">
+            {% for g in games %}
+            <div class="bloxen-card">
+                <a class="thumb" href="/games/{{ g.id }}/{{ g.slug }}">
+                    {% if g.thumbnail_path %}<img src="{{ g.thumbnail_path }}" alt="{{ g.name }}" />{% else %}<div class="bloxen-thumb-missing" style="height:100%">thumbnail<br>MISSING</div>{% endif %}
+                </a>
+                <a class="title" href="/games/{{ g.id }}/{{ g.slug }}">{{ g.name }}</a>
+                <div class="meta">by {{ g.creator }}</div>
+            </div>
+            {% endfor %}
+            <div class="bloxen-clear"></div>
+        </div>
+    </div>
+{% endif %}
+</div>
+{% endblock %}

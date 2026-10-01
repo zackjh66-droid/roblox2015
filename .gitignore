@@ -1,0 +1,19 @@
+# runtime
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# downloaded browser runtime (restored by tools/browser/run-chromium.sh)
+tools/browser/*
+!tools/browser/cdp.py
+!tools/browser/run-chromium.sh
+!tools/browser/README.md
+
+# runtime state (regenerable)
+data/*.sqlite3
+data/*.sqlite3-*
+data/world_cache.json
+data/asset-recovery/
+web/static/refcss/
+web/static/ref-trade-2015.html

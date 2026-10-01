@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Games - BLOXEN{% endblock %}
+{% block content %}
+<div class="container-main" style="max-width:970px; margin: 70px auto 0; font-family:'Source Sans Pro',sans-serif;">
+    <div style="border:1px solid #ccc; border-radius:4px;">
+        <div style="background:#f8f8f8; border-bottom:1px solid #ccc; padding:8px 12px; font-size:16px; font-weight:600;">
+            Games
+            <span class="bloxen-provenance-tag g4">reconstructed page</span>
+        </div>
+        <div style="padding:12px;" class="bloxen-grid">
+            {% for g in games %}
+            <div class="bloxen-card">
+                <a class="thumb" href="/games/{{ g.id }}/{{ g.slug }}">
+                    {% if g.thumbnail_path %}<img src="{{ g.thumbnail_path }}" alt="{{ g.name }}" />{% else %}<div class="bloxen-thumb-missing" style="height:100%">thumbnail<br>MISSING</div>{% endif %}
+                </a>
+                <a class="title" href="/games/{{ g.id }}/{{ g.slug }}">{{ g.name }}</a>
+                <div class="meta">by {{ g.creator }}</div>
+                <div class="meta">{{ g.compatibility_status }}</div>
+            </div>
+            {% endfor %}
+            <div class="bloxen-clear"></div>
+        </div>
+    </div>
+</div>
+{% endblock %}

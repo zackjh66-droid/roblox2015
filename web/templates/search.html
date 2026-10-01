@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Search - BLOXEN{% endblock %}
+{% block content %}
+<div class="container-main" style="max-width:970px; margin: 70px auto 0; font-family:'Source Sans Pro',sans-serif;">
+    <h1 style="font-size:20px;">Search results for "{{ keyword }}"</h1>
+    <div style="border:1px solid #ccc; border-radius:4px; margin-top:12px;">
+        <div style="background:#f8f8f8; border-bottom:1px solid #ccc; padding:6px 12px; font-size:13px; font-weight:600;">People</div>
+        <div style="padding:10px;">
+        {% for u in users %}
+            <div class="bloxen-item-row"><a href="/User.aspx?id={{ u.id }}">{{ u.username }}</a></div>
+        {% else %}<div style="color:#999; font-size:12px;">No people found.</div>{% endfor %}
+        </div>
+    </div>
+    <div style="border:1px solid #ccc; border-radius:4px; margin-top:12px;">
+        <div style="background:#f8f8f8; border-bottom:1px solid #ccc; padding:6px 12px; font-size:13px; font-weight:600;">Games</div>
+        <div style="padding:10px;">
+        {% for g in games %}
+            <div class="bloxen-item-row"><a href="/games/{{ g.id }}/{{ g.slug }}">{{ g.name }}</a> <span style="color:#999;">by {{ g.creator }}</span></div>
+        {% else %}<div style="color:#999; font-size:12px;">No games found.</div>{% endfor %}
+        </div>
+    </div>
+    <div style="border:1px solid #ccc; border-radius:4px; margin-top:12px;">
+        <div style="background:#f8f8f8; border-bottom:1px solid #ccc; padding:6px 12px; font-size:13px; font-weight:600;">Catalog</div>
+        <div style="padding:10px;">
+        {% for i in items %}
+            <div class="bloxen-item-row"><a href="/catalog/item.aspx?ID={{ i.historical_asset_id }}">{{ i.name }}</a></div>
+        {% else %}<div style="color:#999; font-size:12px;">No catalog items found.</div>{% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

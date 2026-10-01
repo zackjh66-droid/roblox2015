@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}About BLOXEN{% endblock %}
+{% block content %}
+<div class="container-main" style="max-width:970px; margin: 70px auto 0; font-family:'Source Sans Pro',sans-serif;">
+    <h1 style="font-size:22px;">About BLOXEN</h1>
+    <div style="border:1px solid #ccc; border-radius:4px; padding:16px; font-size:13px; line-height:1.6;">
+        <p><b>BLOXEN</b> is an unofficial preservation reconstruction of the July&nbsp;2015 Roblox experience.
+        It is not affiliated with, endorsed by, or connected to Roblox Corporation.</p>
+        <h2 style="font-size:15px;">Provenance policy</h2>
+        <p>Every historical claim and asset carries a provenance grade:</p>
+        <ol>
+            <li><b>ORIGINAL</b> — preserved original material</li>
+            <li><b>ARCHIVED-EXACT</b> — archived exact-date evidence</li>
+            <li><b>ARCHIVED-NEAR</b> — archived near-date evidence</li>
+            <li><b>RECONSTRUCTION</b> — reconstruction from evidence (never labeled "original")</li>
+            <li><b>INFERENCE</b> — inference only</li>
+        </ol>
+        <h2 style="font-size:15px;">Target build</h2>
+        <ul>
+            <li>Target date: 23 July 2015</li>
+            <li>Windows Player: 0.205.0.61876 (<code>version-0d46087630eb46cd</code>)</li>
+            <li>Verified against DeployHistory mirror, RobloxAPI/build-archive metadata, and setup-rbxcdn version history (three independent sources).</li>
+        </ul>
+        <h2 style="font-size:15px;">Security</h2>
+        <p>BLOXEN never requests real Roblox credentials, never proxies live Roblox services, and never
+        executes unreviewed historical scripts or binaries. Historical client execution is a separate
+        controlled Windows-validation stage.</p>
+    </div>
+</div>
+{% endblock %}

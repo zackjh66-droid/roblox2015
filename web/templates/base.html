@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <!-- BLOXEN preservation reconstruction — layout evidence: July-2015 archived pages -->
+    <title>{% block title %}BLOXEN{% endblock %}</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="en-us" />
+    <link href="/static/css/fonts-source-sans.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Preserved 2015-era bundles (research/sources/website) -->
+    <link rel="stylesheet" href="/static/css/page___454963b97fe545e3b3f2aaf85eef6d4a_m.css">
+    <link rel="stylesheet" href="/static/css/main___7000c43d73500e63554d81258494fa21_m.css">
+    <link rel="stylesheet" href="/static/css/bloxen.css">
+</head>
+<body id="rbx-body">
+<div id="bloxen-disclosure">
+    <span class="brand">BLOXEN</span> — unofficial preservation reconstruction of the July&nbsp;2015 Roblox
+    experience. Not affiliated with Roblox Corporation. Historical layout reconstructed from archived evidence.
+    <a href="/bloom/about">provenance</a>
+</div>
+
+<div id="header" class="navbar-fixed-top rbx-header" role="navigation">
+    <div class="container-fluid">
+        <div class="rbx-navbar-header">
+            <div data-behavior="nav-notification" class="rbx-nav-collapse" onselectstart="return false;">
+                <div class="rbx-nav-notification hide rbx-font-xs" title="0"></div>
+            </div>
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/"><span class="logo logo-transitional"><span class="bloxen-mark">BLOXEN<small>PRESERVATION</small></span></span></a>
+            </div>
+        </div>
+        <ul class="nav rbx-navbar hidden-xs hidden-sm col-md-4 col-lg-3">
+            <li><a href="/games">Games</a></li>
+            <li><a href="/catalog">Catalog</a></li>
+            <li><a href="/develop">Develop</a></li>
+            <li><a class="buy-robux" href="/bloom/about">ROBUX</a></li>
+        </ul>
+        <div id="navbar-universal-search" class="navbar-left rbx-navbar-search col-xs-5 col-sm-6 col-md-3" data-behavior="univeral-search" role="search">
+            <div class="input-group rbx-input-group">
+                <input id="navbar-search-input" class="form-control rbx-input-field" type="text" placeholder="Search" maxlength="120" />
+                <div class="input-group-btn rbx-input-group-btn">
+                    <button id="navbar-search-btn" class="rbx-input-addon-btn" type="submit" onclick="bloxenSearch()">
+                        <span class="rbx-icon-nav-search"></span>
+                    </button>
+                </div>
+            </div>
+            <ul data-toggle="dropdown-menu" class="rbx-dropdown-menu" role="menu">
+                <li class="rbx-navbar-search-option selected"><span class="rbx-navbar-search-text">Search <span class="rbx-navbar-search-string"></span> in People</span></li>
+                <li class="rbx-navbar-search-option"><span class="rbx-navbar-search-text">Search <span class="rbx-navbar-search-string"></span> in Games</span></li>
+                <li class="rbx-navbar-search-option"><span class="rbx-navbar-search-text">Search <span class="rbx-navbar-search-string"></span> in Catalog</span></li>
+            </ul>
+        </div>
+        <div class="navbar-right rbx-navbar-right col-xs-4 col-sm-3">
+            <ul class="nav navbar-right rbx-navbar-right-nav" data-display-opened="False">
+                {% if user %}
+                <li><a class="rbx-navbar-signup" href="/User.aspx?id={{ user.id }}" style="font-weight:600;">{{ user.username }}</a></li>
+                <li><a class="rbx-navbar-login" href="/My/Character.aspx">Character</a></li>
+                <li><a class="rbx-navbar-login" href="/My/Stuff.aspx">Inventory</a></li>
+                <li><a class="rbx-navbar-login" href="/Login/Logout.aspx">Log Out</a></li>
+                {% else %}
+                <li><a id="header-login" class="rbx-navbar-login" href="/Login.aspx">Log In</a></li>
+                <li><a class="rbx-navbar-signup" href="/Register.aspx">Sign Up</a></li>
+                {% endif %}
+            </ul>
+        </div>
+        <ul class="nav rbx-navbar hidden-md hidden-lg col-xs-12">
+            <li><a href="/games">Games</a></li>
+            <li><a href="/catalog">Catalog</a></li>
+            <li><a href="/develop">Develop</a></li>
+            <li><a class="buy-robux" href="/bloom/about">ROBUX</a></li>
+        </ul>
+    </div>
+</div>
+
+<div id="navContent" class="nav-content">
+    <div class="nav-content-inner">
+        <div id="MasterContainer">
+            <div id="BodyWrapper">
+                {% block content %}{% endblock %}
+            </div>
+            <div id="footer" class="footer-container" style="max-width:970px; margin: 30px auto 20px; font-size:11px; color:#666; font-family:'Source Sans Pro',sans-serif;">
+                <div class="footer" style="border-top:1px solid #e3e3e3; padding-top:10px;">
+                    <p>
+                        <a href="/bloom/about">About BLOXEN</a> &nbsp;|&nbsp;
+                        <a href="/bloom/about">Provenance &amp; Research</a> &nbsp;|&nbsp;
+                        <a href="/bloom/about">Privacy</a> &nbsp;|&nbsp;
+                        <a href="/bloom/about">Terms</a>
+                    </p>
+                    <p style="color:#999;">
+                        BLOXEN is a preservation reconstruction. It is not affiliated with, endorsed by, or connected to
+                        Roblox Corporation. ROBLOX is a trademark of Roblox Corporation. Historical page structure
+                        reconstructed from archived 2015 evidence; see provenance labels throughout.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+function bloxenSearch() {
+    var q = document.getElementById('navbar-search-input').value;
+    if (q) { window.location = '/search/results.aspx?Keyword=' + encodeURIComponent(q); }
+}
+document.getElementById('navbar-search-input').addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') bloxenSearch();
+});
+</script>
+</body>
+</html>

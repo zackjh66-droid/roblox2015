@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Login - BLOXEN{% endblock %}
+{% block content %}
+<div class="container-main" style="max-width:970px; margin: 70px auto 0; font-family:'Source Sans Pro',sans-serif;">
+    <div style="width:360px; margin:30px auto; border:1px solid #ccc; border-radius:4px;">
+        <div style="background:#f8f8f8; border-bottom:1px solid #ccc; padding:8px 12px; font-size:15px; font-weight:600;">Login to BLOXEN</div>
+        <form method="post" action="/Login.aspx" style="padding:16px;">
+            {% if error %}<div style="color:#c8201a; font-size:12px; margin-bottom:10px;">{{ error }}</div>{% endif %}
+            <div style="margin-bottom:10px;">
+                <div class="form-label" style="font-size:12px; margin-bottom:3px;">Username</div>
+                <input name="username" class="form-control" style="width:100%; padding:5px; font-size:13px;" maxlength="20" required />
+            </div>
+            <div style="margin-bottom:14px;">
+                <div class="form-label" style="font-size:12px; margin-bottom:3px;">Password</div>
+                <input name="password" type="password" class="form-control" style="width:100%; padding:5px; font-size:13px;" required />
+            </div>
+            <button type="submit" style="padding:6px 22px; font-size:13px; color:#fff; background:linear-gradient(#3fbc3f,#2e9e2e); border:1px solid #2a8a2a; border-radius:4px; cursor:pointer;">Log In</button>
+            <div style="margin-top:12px; font-size:12px;">New to BLOXEN? <a href="/Register.aspx">Sign Up</a></div>
+            <div style="margin-top:10px; font-size:11px; color:#999;">BLOXEN accounts are local preservation accounts. Never enter real Roblox credentials anywhere.</div>
+        </form>
+    </div>
+</div>
+{% endblock %}

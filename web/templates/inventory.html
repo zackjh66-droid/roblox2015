@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}My Stuff - BLOXEN{% endblock %}
+{% block content %}
+<div class="container-main" style="max-width:970px; margin: 70px auto 0; font-family:'Source Sans Pro',sans-serif;">
+    <h1 style="font-size:22px; margin:0 0 12px; color:#393939;">{{ owner.username }}'s Stuff</h1>
+    <div style="border:1px solid #ccc; border-radius:4px;">
+        <div style="padding:8px 12px; border-bottom:1px solid #eee; font-size:12px;">
+            {% for c in categories %}
+            <a href="/My/Stuff.aspx?category={{ c }}" style="margin-right:12px; color:{% if c == category %}#c8201a; font-weight:600{% else %}#0055b3{% endif %};">{{ c }}</a>
+            {% endfor %}
+        </div>
+        <div style="padding:12px;" class="bloxen-grid">
+            {% for item in items %}
+            <div class="bloxen-card">
+                <a class="thumb" href="/catalog/item.aspx?ID={{ item.historical_asset_id }}">
+                    {% if item.thumbnail_path %}<img src="{{ item.thumbnail_path }}" />{% else %}<div class="bloxen-thumb-missing" style="height:100%">thumb MISSING</div>{% endif %}
+                </a>
+                <a class="title" href="/catalog/item.aspx?ID={{ item.historical_asset_id }}">{{ item.name }}</a>
+                <div class="meta">{{ item.item_type }}</div>
+            </div>
+            {% else %}
+            <div style="color:#999; font-size:12px; padding:10px;">Inventory is empty. Visit the <a href="/catalog">Catalog</a>.</div>
+            {% endfor %}
+            <div class="bloxen-clear"></div>
+        </div>
+    </div>
+</div>
+{% endblock %}

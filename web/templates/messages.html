@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}Messages - BLOXEN{% endblock %}
+{% block content %}
+<div class="container-main" style="max-width:970px; margin: 70px auto 0; font-family:'Source Sans Pro',sans-serif;">
+    <h1 style="font-size:22px; margin:0 0 12px;">Messages</h1>
+    <div style="display:flex; gap:18px;">
+        <div style="flex:1; min-width:320px;">
+            <div style="border:1px solid #ccc; border-radius:4px;">
+                <div style="background:#f8f8f8; border-bottom:1px solid #ccc; padding:8px 12px; font-size:14px; font-weight:600;">Inbox</div>
+                <div style="padding:8px 12px;">
+                {% for m in inbox %}
+                    <div class="bloxen-item-row">
+                        <b>{{ m.subject }}</b> from <a href="/User.aspx?id={{ m.from_user }}">{{ m.from_name }}</a>
+                        <div style="color:#777; font-size:11px;">{{ m.created_at }}</div>
+                        <div style="margin-top:3px;">{{ m.body }}</div>
+                    </div>
+                {% else %}
+                    <div style="color:#999; font-size:12px;">No messages.</div>
+                {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div style="width:320px; min-width:280px;">
+            <div style="border:1px solid #ccc; border-radius:4px; padding:12px;">
+                <div style="font-size:14px; font-weight:600; margin-bottom:8px;">New Message</div>
+                <form method="post" action="/My/Message.aspx">
+                    <input name="to" placeholder="Username" style="width:100%; padding:4px; font-size:12px; margin-bottom:6px;" />
+                    <input name="subject" placeholder="Subject" style="width:100%; padding:4px; font-size:12px; margin-bottom:6px;" />
+                    <textarea name="body" rows="4" style="width:100%; font-size:12px;"></textarea>
+                    <button style="margin-top:8px; padding:4px 16px; font-size:12px; background:linear-gradient(#fff,#eee); border:1px solid #aaa; border-radius:3px;">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Friends - BLOXEN{% endblock %}
+{% block content %}
+<div class="container-main" style="max-width:970px; margin: 70px auto 0; font-family:'Source Sans Pro',sans-serif;">
+    <h1 style="font-size:22px; margin:0 0 12px;">{{ owner.username }}'s Friends</h1>
+    <div style="border:1px solid #ccc; border-radius:4px; padding:12px;" class="bloxen-grid">
+        {% for f in friends %}
+        <div class="bloxen-card" style="width:120px;">
+            <a class="thumb" style="width:120px; height:120px;" href="/User.aspx?id={{ f.id }}">
+                {% if f.avatar_thumb %}<img src="{{ f.avatar_thumb }}" />{% else %}<div class="bloxen-thumb-missing" style="height:100%">{{ f.username[0] }}</div>{% endif %}
+            </a>
+            <a class="title" href="/User.aspx?id={{ f.id }}">{{ f.username }}</a>
+        </div>
+        {% else %}
+        <div style="color:#999; font-size:12px; padding:10px;">No friends yet.</div>
+        {% endfor %}
+        <div class="bloxen-clear"></div>
+    </div>
+    {% if user and pending %}
+    <h2 style="font-size:16px; margin:18px 0 8px;">Friend Requests</h2>
+    <div style="border:1px solid #ccc; border-radius:4px; padding:10px;">
+        {% for p in pending %}
+        <div class="bloxen-item-row">
+            <a href="/User.aspx?id={{ p.id }}">{{ p.username }}</a>
+            <form method="post" action="/friends/respond" style="display:inline; float:right;">
+                <input type="hidden" name="user_id" value="{{ p.id }}" />
+                <button name="decision" value="accept" style="padding:2px 10px; font-size:11px;">Accept</button>
+                <button name="decision" value="decline" style="padding:2px 10px; font-size:11px;">Decline</button>
+            </form>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

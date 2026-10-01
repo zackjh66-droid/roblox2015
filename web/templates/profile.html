@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block title %}{{ profile.username }} - BLOXEN{% endblock %}
+{% block content %}
+<div class="container-main" style="max-width:970px; margin: 70px auto 0; font-family:'Source Sans Pro',sans-serif;">
+    <div style="display:flex; gap:18px; flex-wrap:wrap;">
+        <div style="width:300px; min-width:280px;">
+            <div style="border:1px solid #ccc; border-radius:4px;">
+                <div style="padding:14px; text-align:center;">
+                    {% if avatar_thumb %}
+                    <img src="{{ avatar_thumb }}" width="150" height="150" style="border:1px solid #ddd;" />
+                    {% else %}
+                    <div class="bloxen-thumb-missing" style="width:150px; height:150px; margin:0 auto; line-height:150px;">avatar</div>
+                    {% endif %}
+                    <h2 style="font-size:18px; margin:8px 0 2px;">{{ profile.username }}</h2>
+                    <div style="font-size:11px; color:#999;">{{ profile.blurb }}</div>
+                </div>
+                <div style="border-top:1px solid #eee; padding:10px 12px; font-size:12px;">
+                    <div style="margin-bottom:6px;">Member since: {{ profile.join_date or 'unverified' }}</div>
+                    <div>
+                        {% if user and user.id != profile.id %}
+                        <form method="post" action="/friends/request" style="display:inline;">
+                            <input type="hidden" name="user_id" value="{{ profile.id }}" />
+                            <button style="padding:4px 12px; font-size:12px; background:linear-gradient(#fff,#eee); border:1px solid #aaa; border-radius:3px; cursor:pointer;">
+                                {{ 'Friends' if is_friend else 'Add Friend' }}
+                            </button>
+                        </form>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="width:610px; min-width:320px;">
+            <div style="border:1px solid #ccc; border-radius:4px; margin-bottom:12px;">
+                <ul style="list-style:none; margin:0; padding:0; border-bottom:1px solid #ccc; background:#f8f8f8;">
+                    <li style="display:inline-block; padding:8px 16px; font-weight:600; font-size:13px;">About</li>
+                    <li style="display:inline-block; padding:8px 16px; font-size:13px; color:#666;">Creations</li>
+                    <li style="display:inline-block; padding:8px 16px; font-size:13px; color:#666;">Inventory</li>
+                </ul>
+                <div style="padding:12px; font-size:13px; color:#444;">
+                    {{ profile.blurb or 'This user has not written a blurb.' }}
+                </div>
+            </div>
+            <div style="border:1px solid #ccc; border-radius:4px;">
+                <div style="background:#f8f8f8; border-bottom:1px solid #ccc; padding:6px 10px; font-size:13px; font-weight:600;">Favorite Games</div>
+                <div style="padding:10px;">
+                {% for g in favorites %}
+                    <div class="bloxen-item-row"><a href="/games/{{ g.id }}/{{ g.slug }}">{{ g.name }}</a></div>
+                {% else %}
+                    <div style="color:#999; font-size:12px;">No favorite games.</div>
+                {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

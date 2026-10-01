@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}Develop - BLOXEN{% endblock %}
+{% block content %}
+<div class="container-main" style="max-width:970px; margin: 70px auto 0; font-family:'Source Sans Pro',sans-serif;">
+    <h1 style="font-size:22px; margin:0 0 12px;">Develop
+        <span class="bloxen-provenance-tag g4">reconstructed page</span>
+    </h1>
+    <div style="border:1px solid #ccc; border-radius:4px;">
+        <ul style="list-style:none; margin:0; padding:0; border-bottom:1px solid #ccc; background:#f8f8f8; font-size:13px;">
+            <li style="display:inline-block; padding:8px 16px; font-weight:600;">My Creations</li>
+            <li style="display:inline-block; padding:8px 16px; color:#666;">Library</li>
+            <li style="display:inline-block; padding:8px 16px; color:#666;">Manage Plugins</li>
+        </ul>
+        <div style="padding:14px;">
+            <h2 style="font-size:15px;">Places</h2>
+            <p style="font-size:12px; color:#666;">
+                BLOXEN preserves imported historical places. The RBXL/RBXLX importer intake pipeline is
+                documented in <code>docs/GAMES.md</code>; scripts are stored as inert data and are never
+                executed at intake.
+            </p>
+            <table style="font-size:12px; border-collapse:collapse; width:100%;">
+                <tr style="background:#f2f2f2;">
+                    <th align="left" style="padding:6px;">Place</th>
+                    <th align="left" style="padding:6px;">SHA-256</th>
+                    <th align="left" style="padding:6px;">Format</th>
+                    <th align="left" style="padding:6px;">Status</th>
+                </tr>
+                {% for g in games %}
+                <tr style="border-top:1px solid #eee;">
+                    <td style="padding:6px;"><a href="/games/{{ g.id }}/{{ g.slug }}">{{ g.name }}</a></td>
+                    <td style="padding:6px; font-family:monospace; font-size:10px;">{{ (g.place_sha256 or '')[:16] }}</td>
+                    <td style="padding:6px;">{{ g.format or 'rbxl-binary' }}</td>
+                    <td style="padding:6px;">{{ g.compatibility_status }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

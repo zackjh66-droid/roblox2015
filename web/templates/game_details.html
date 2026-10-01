@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% block title %}{{ game.name }} - BLOXEN{% endblock %}
+{% block content %}
+<div class="container-main" style="max-width:970px; margin: 70px auto 0; font-family:'Source Sans Pro',sans-serif;">
+    <h1 style="font-size:26px; margin:0 0 4px; color:#393939;">{{ game.name }}</h1>
+    <div style="font-size:12px; color:#666; margin-bottom:12px;">
+        by <a href="/User.aspx?username={{ game.creator }}">{{ game.creator }}</a>
+        <span class="bloxen-provenance-tag g{{ game.provenance_grade }}">{{ game.provenance_label }}</span>
+    </div>
+    <div style="display:flex; gap:18px; flex-wrap:wrap;">
+        <div style="width:610px; min-width:320px;">
+            <div style="border:1px solid #ccc; border-radius:4px; margin-bottom:12px;">
+                <div style="width:100%; height:330px; background:#e9e9e9; border-bottom:1px solid #ccc;">
+                    {% if game.thumbnail_path %}<img src="{{ game.thumbnail_path }}" style="width:100%; height:100%; object-fit:cover;" />
+                    {% else %}<div class="bloxen-thumb-missing" style="height:100%; line-height:330px;">place thumbnail MISSING — not fabricated</div>{% endif %}
+                </div>
+                <div style="padding:12px; text-align:center;">
+                    {% if user %}
+                    <form method="post" action="/play/start" style="display:inline;">
+                        <input type="hidden" name="game_id" value="{{ game.id }}" />
+                        <button type="submit" style="padding:8px 34px; font-size:16px; font-weight:600; color:#fff; background:linear-gradient(#3fbc3f,#2e9e2e); border:1px solid #2a8a2a; border-radius:6px; cursor:pointer;">
+                            Play
+                        </button>
+                    </form>
+                    {% else %}
+                    <a href="/Login.aspx" style="padding:8px 34px; font-size:16px; font-weight:600; color:#fff; background:linear-gradient(#3fbc3f,#2e9e2e); border:1px solid #2a8a2a; border-radius:6px; text-decoration:none; display:inline-block;">Play</a>
+                    {% endif %}
+                    {% if user %}
+                    <form method="post" action="/games/{{ game.id }}/favorite" style="display:inline; margin-left:8px;">
+                        <button type="submit" style="padding:8px 18px; font-size:13px; background:linear-gradient(#fff,#eee); border:1px solid #aaa; border-radius:6px; cursor:pointer;">
+                            {{ 'Unfavorite' if is_favorite else 'Favorite' }}
+                        </button>
+                    </form>
+                    {% endif %}
+                </div>
+            </div>
+            <div style="border:1px solid #ccc; border-radius:4px;">
+                <ul style="list-style:none; margin:0; padding:0; border-bottom:1px solid #ccc; background:#f8f8f8;">
+                    <li style="display:inline-block; padding:8px 16px; font-weight:600; font-size:13px; border-right:1px solid #ddd;">About</li>
+                    <li style="display:inline-block; padding:8px 16px; font-size:13px; color:#666;">Store</li>
+                    <li style="display:inline-block; padding:8px 16px; font-size:13px; color:#666;">Servers</li>
+                </ul>
+                <div style="padding:12px; font-size:13px; color:#333;">
+                    <p>{{ game.description or 'No description is preserved for this game.' }}</p>
+                    <h3 style="font-size:13px;">Preservation record</h3>
+                    <table style="font-size:12px; border-collapse:collapse;">
+                        <tr><td style="padding:2px 10px 2px 0; color:#888;">Historical place ID</td><td>{{ game.historical_place_id or 'unverified' }}</td></tr>
+                        <tr><td style="padding:2px 10px 2px 0; color:#888;">Version / date</td><td>{{ game.version_label or 'unverified' }}</td></tr>
+                        <tr><td style="padding:2px 10px 2px 0; color:#888;">Place file SHA-256</td><td style="font-family:monospace; font-size:11px;">{{ game.place_sha256 or '—' }}</td></tr>
+                        <tr><td style="padding:2px 10px 2px 0; color:#888;">Compatibility</td><td>{{ game.compatibility_status }}</td></tr>
+                        <tr><td style="padding:2px 10px 2px 0; color:#888;">Provenance</td><td>{{ game.provenance_note }}</td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div style="width:300px; min-width:280px;">
+            <div style="border:1px solid #ccc; border-radius:4px; margin-bottom:12px;">
+                <div style="background:#f8f8f8; border-bottom:1px solid #ccc; padding:6px 10px; font-size:13px; font-weight:600;">Statistics</div>
+                <div style="padding:10px; font-size:12px; color:#555;">
+                    <div style="margin-bottom:6px;">Visits: <b>preserved data only</b></div>
+                    <div style="margin-bottom:6px;">Favorites: <b>{{ fav_count }}</b> (BLOXEN)</div>
+                    <div>Genre: <b>{{ game.genre }}</b></div>
+                </div>
+            </div>
+            <div style="border:1px solid #ccc; border-radius:4px;">
+                <div style="background:#f8f8f8; border-bottom:1px solid #ccc; padding:6px 10px; font-size:13px; font-weight:600;">Asset recovery</div>
+                <div style="padding:10px; font-size:12px; color:#555;">
+                    {{ asset_stats.recovered }} recovered / {{ asset_stats.total }} referenced ({{ asset_stats.missing }} MISSING)
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
