@@ -38,7 +38,7 @@
         </ul>
         <div id="navbar-universal-search" class="navbar-left rbx-navbar-search col-xs-5 col-sm-6 col-md-3" data-behavior="univeral-search" role="search">
             <div class="input-group rbx-input-group">
-                <input id="navbar-search-input" class="form-control rbx-input-field" type="text" placeholder="Search" maxlength="120" />
+                <input id="navbar-search-input" class="form-control rbx-input-field" type="text" placeholder="Search" maxlength="120" onkeydown="if(event.key==='Enter'){bloxenSearch();}" />
                 <div class="input-group-btn rbx-input-group-btn">
                     <button id="navbar-search-btn" class="rbx-input-addon-btn" type="submit" onclick="bloxenSearch()">
                         <span class="rbx-icon-nav-search"></span>
@@ -102,6 +102,7 @@ function bloxenSearch() {
     var q = document.getElementById('navbar-search-input').value;
     if (q) { window.location = '/search/results.aspx?Keyword=' + encodeURIComponent(q); }
 }
+
 document.getElementById('navbar-search-input').addEventListener('keydown', function (e) {
     if (e.key === 'Enter') bloxenSearch();
 });

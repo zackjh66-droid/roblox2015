@@ -47,14 +47,25 @@ material (grade 1)** with era-fit assessed at grade 3.
 
 Browser screenshots were captured with headless Chromium (CDP) for every major page and
 compared against the rendered historical reference (`/static/ref-trade-2015.html` with the
-preserved CSS). Comparison record: `checkpoints/screenshots/`:
+preserved CSS). Capture pipeline (`tools/browser/cdp.py`, `capture_pages.py`,
+`flow_login.py`) waits for load events, uses a single visible target, and records a DOM
+fingerprint sidecar (`*.png.txt`: requested URL, landed URL, title, body text) beside each
+screenshot so every capture is auditable.
+
+Comparison record: `checkpoints/screenshots/`:
 
 - `ref-2015-trade-header.png` — historical header/nav rendered with preserved CSS
-- `bloxen-home-loggedout.png`, `bloxen-games.png`, `bloxen-catalog.png`,
-  `bloxen-catalog-item.png`, `bloxen-game-details.png`, `bloxen-login.png`
+- `ss-*.png` + sidecars — logged-out page set (home, games, game details, catalog,
+  catalog item, login, register, search, about)
+- `flow-*.png` — real browser register → login → 14 logged-in pages (sidecar-verified)
 
-Corrections made from comparison: logo constrained to the 166px historical slot; content
-widths held to the evidenced 970px container.
+Corrections made from comparison:
+- logo wordmark rebuilt to the preserved CSS metrics
+  (`.navbar-brand{font-size:20px;line-height:20px;height:30px;padding:5px 0}`,
+  `.rbx-navbar-header{max-width:76px;margin:0 12px}`) so it no longer collides with the nav
+- content widths held to the evidenced 970px container
+- `/User.aspx` own-profile bug found via screenshot review and fixed
+- search accepts both the historical `Keyword` parameter and `q`; Enter key submits
 
 ## MISSING (not fabricated)
 

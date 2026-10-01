@@ -36,9 +36,12 @@ class SimResult:
 @dataclass
 class SimReport:
     results: list = field(default_factory=list)
+    verbose: bool = False
 
     def add(self, step, ok, detail=""):
         self.results.append(SimResult(step, ok, detail))
+        if self.verbose:
+            print(f"  [{'PASS' if ok else 'FAIL'}] {step}: {detail}", flush=True)
         return ok
 
     @property
@@ -69,8 +72,8 @@ def http_json(url: str, data: dict | None = None, headers=None) -> dict | str:
 
 async def run_scenario(web_base: str, compat_base: str, gs_addr: tuple,
                        username: str = "SimUser", password: str = "sim-password-1",
-                       game_id: int = 1) -> SimReport:
-    rep = SimReport()
+                       game_id: int = 1, verbose: bool = False) -> SimReport:
+    rep = SimReport(verbose=verbose)
     try:
         # 1. register + login through the real web API
         try:
@@ -230,9 +233,11 @@ async def run_scenario(web_base: str, compat_base: str, gs_addr: tuple,
                         rr.read_u32()
                     else:
                         rr.read_string()
-            interesting = [n for n in names if n in ("Humanoid", "Torso", "Head", "Players", "BodyColors")]
-            rep.add("id-data", count > 0,
-                    f"instances={count} player-tree={interesting}")
+            from collections import Counter
+            interesting = Counter(n for n in names
+                                  if n in ("Humanoid", "Torso", "Head", "Players", "BodyColors"))
+            rep.add("id-data", count > 0 and interesting.get("Humanoid", 0) > 0,
+                    f"instances={count} player-tree={dict(interesting)}")
         else:
             rep.add("id-data", False, "not received")
 
@@ -253,11 +258,20 @@ def main():
     ap.add_argument("--gs-port", type=int, default=53640)
     ap.add_argument("--username", default="SimUser")
     ap.add_argument("--game", type=int, default=1)
+    ap.add_argument("-v", "--verbose", action="store_true",
+                    help="print each scenario step as it completes")
+    ap.add_argument("--json", action="store_true", help="emit the report as JSON")
     args = ap.parse_args()
     rep = asyncio.run(run_scenario(args.web, args.compat, (args.gs_host, args.gs_port),
-                                   username=args.username, game_id=args.game))
-    print(rep.dump())
-    print("SIMULATOR RESULT:", "PASS" if rep.ok else "FAIL")
+                                   username=args.username, game_id=args.game,
+                                   verbose=args.verbose))
+    if args.json:
+        print(json.dumps({"ok": rep.ok,
+                          "results": [r.__dict__ for r in rep.results]}, indent=2))
+    else:
+        print(rep.dump())
+        print("SIMULATOR RESULT:", "PASS" if rep.ok else "FAIL")
+        print("(SIMULATOR-TESTED — never REAL-CLIENT-TESTED)")
 
 
 if __name__ == "__main__":

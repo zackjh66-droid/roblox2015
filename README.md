@@ -29,8 +29,9 @@ from three independent archived sources.
 - Simulator scenario: register → Play → RakNet → descriptors → SET_GLOBALS → ID_DATA: **PASS**
 - Genuine client execution: **BLOCKED in this cloud environment** — see
   `docs/WINDOWS-REAL-CLIENT-VALIDATION.md`. Nothing is claimed REAL-CLIENT-TESTED.
-- Asset recovery: 889 external asset IDs referenced by preserved games, **0 recovered — all
-  honestly labeled MISSING** (no fabrications)
+- Asset recovery: 609 unique external asset IDs referenced by preserved games,
+  **15 recovered** (real historical meshes/sounds/textures) / **594 honestly labeled
+  MISSING** (no fabrications)
 
 ## Run
 

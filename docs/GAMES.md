@@ -25,8 +25,8 @@ exploit dumping is **rejected** (no such sources were used).
 | Flood Escape (July 8th, 2015, V1.6.5) | Crazyblox | `Flood Escape (July 8th, 2015, V1.6.5).rbxl` | c247b438… | 10,015 | 311 | 82 | meta.json: creator Crazyblox + 17 badges; **exact-era save date** |
 | Natural Disaster Survival | Stickmasterluke | `Natural Disaster Survival.rbxl` | da90bd8d… | 9,595 | 23 | 0 | beagleded copy (no sidecar); creator attribution grade 3 |
 
-**Total: 7 preserved games, 156,173 instances parsed, 1,514 scripts inventoried (never
-executed), 889 external asset IDs enumerated.**
+**Total: 7 preserved games imported and parsed, 1,500+ scripts inventoried (never
+executed), 609 unique external asset IDs indexed.**
 
 ## Rejected / missing candidates
 
@@ -61,3 +61,24 @@ quarantined places and asserts class/instance fingerprints (safe parsed metadata
   replication of its hierarchy. Gameplay logic = NOT RUNNING (explicitly).
 - A controlled script-evaluation stage (reviewed scripts only, sandboxed) is future work;
   per-game requirements will be tracked in `place_imports.script_inventory`.
+
+## Per-game playability requirements (static analysis — scripts never executed)
+
+`tools/gameplay_requirements.py` statically scans all 1,514 script bodies (3.5 MB Lua,
+SHA-256'd) to classify required runtime features. Output:
+`research/db/gameplay_requirements.json`.
+
+| Game | Scripts | Source scanned | Features detected (sample) | Required logic pillars | Playable? |
+|---|---|---|---|---|---|
+| Work at a Pizza Place | 311 | 1.0 MB | remotes, Humanoid, GUI, persistence, BodyMovers, teams | pizza state machine, jobs, building tools, money, customer AI | **NO** |
+| Speed Run 4 | 131 | 78 KB | checkpoints, leaderstats, spawn/reset | stage system, timer, kill bricks | **NO** |
+| Town of Robloxia | 221 | 309 KB | jobs, tools, teams, day/night | job system, disaster cycle, housing | **NO** |
+| The Normal Elevator | 289 | 714 KB | GUI, remotes, camera | elevator FSM, floors, minigame rounds | **NO** |
+| Mad Games | 228 | 792 KB | round logic, loadout, leaderstats | minigame rotation, scoring | **NO** |
+| Flood Escape | 311 | 530 KB | physics parts, GUI, voting | water sim, maps, buttons, stages | **NO** |
+| Natural Disaster Survival | 23 | 90 KB | disaster scheduler, effects, admin-commands script (**stays inert forever**) | disaster physics, map rotation, scoring | **NO** |
+
+**No game is claimed playable.** The path to "playable" is: review each script family →
+sandboxed 2015-Lua runtime → feature-gated activation per pillar → SIMULATOR-TESTED →
+(real client) REAL-CLIENT-TESTED. Person299's Admin Commands (NDS) and any admin/HTTP
+scripts remain quarantined inert data regardless.

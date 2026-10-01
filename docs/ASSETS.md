@@ -9,8 +9,22 @@ sounds, shirts, pants, faces, hats, models, animations) and registered in the `a
 - `status`: **MISSING** / RECOVERED / REJECTED
 - dependencies per game (`asset_dependencies`)
 
-Current state (seeded from 7 preserved games): **889 external asset IDs referenced,
-0 recovered, 889 MISSING**. Game pages show this honestly ("0 recovered / N referenced").
+Current state (seeded from 7 preserved games): **609 unique external asset IDs referenced**
+(639 place↔asset dependency rows). **15 recovered, 594 MISSING** — game pages show this
+honestly ("N recovered / M referenced").
+
+### Recovered so far (all grade 3, public preservation re-hosts)
+
+| IDs | Type | Source | Notes |
+|---|---|---|---|
+| 10548108, 10730819, 11450310, 12517136, 15729251 | Sound (Ogg) | artemhao/OldRobloxSounds, RBXUser4132/novetus-assets | filenames = historical asset IDs |
+| 1033714, 13073626, 15726506, 16646125, 16657069, 18813348, 21382712, 22589477, 42163552 | Mesh (classic `version 1.00` format) | RBXUser4132/novetus-assets | verified mesh headers |
+| 53550245 | Texture (PNG) | RBXUser4132/novetus-assets | verified PNG magic |
+
+Each is hash-registered in `assets` + `research` DB `sources` with retrieval date and source
+URL. Rejected as historical: `Soliviant/Solivion-s-Archive-But-Readable` (modern Luau-era
+personal collection), `volxten/VolxtensNovetusAssets` (name-organized music, not historical
+IDs), `tajoma9x/rbxpack` (tooling only).
 
 ## Rules
 

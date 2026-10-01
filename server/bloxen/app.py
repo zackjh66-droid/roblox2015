@@ -221,8 +221,13 @@ def build_app() -> FastAPI:
     def profile(request: Request, id: int = 0, username: str = ""):
         con = get_db()
         user = current_user(request, con)
-        row = con.execute("SELECT * FROM users WHERE id = ?", (id,)).fetchone() if id else \
-            con.execute("SELECT * FROM users WHERE username = ?", (username,)).fetchone()
+        if id:
+            row = con.execute("SELECT * FROM users WHERE id = ?", (id,)).fetchone()
+        elif username:
+            row = con.execute("SELECT * FROM users WHERE username = ?", (username,)).fetchone()
+        else:
+            # own profile when logged in (2015: /User.aspx with no id = you)
+            row = user
         if not row:
             con.close()
             return RedirectResponse("/", status_code=302)
@@ -444,7 +449,8 @@ def build_app() -> FastAPI:
         return RedirectResponse("/My/Message.aspx", status_code=302)
 
     @app.get("/search/results.aspx", response_class=HTMLResponse)
-    def search(request: Request, Keyword: str = ""):
+    def search(request: Request, Keyword: str = "", q: str = ""):
+        Keyword = Keyword or q      # accept q as alias (2015 contract uses Keyword)
         con = get_db()
         user = current_user(request, con)
         like = f"%{Keyword}%"

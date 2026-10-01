@@ -19,27 +19,29 @@
 #bloxen-disclosure .brand { font-weight: 700; letter-spacing: 2px; color: #fff; }
 
 /* BLOXEN wordmark standing in for the historical logo image (missing asset).
-   Sized to the historical logo slot (.rbx-navbar-header max-width:166px). */
+   Metrics mirror the preserved CSS: .navbar-brand{font-size:20px;line-height:20px;
+   height:30px;padding:5px 0} and .rbx-navbar-header{max-width:76px;margin:0 12px}. */
 .logo-transitional .bloxen-mark,
 a.navbar-brand .bloxen-mark {
     display: block;
-    width: 150px;
+    width: 76px;
+    height: 30px;
     font-family: "Source Sans Pro", sans-serif;
     font-weight: 700;
-    font-size: 21px;
-    line-height: 26px;
+    font-size: 14px;
+    line-height: 15px;
     color: #e2231a;
-    letter-spacing: 1px;
-    padding: 8px 0 0 6px;
+    letter-spacing: 0.5px;
+    padding: 0;
     white-space: nowrap;
     overflow: hidden;
 }
 .logo-transitional .bloxen-mark small {
     display: block;
-    font-size: 7px;
-    letter-spacing: 2px;
+    font-size: 6px;
+    letter-spacing: 1px;
     color: #6d6d6d;
-    line-height: 8px;
+    line-height: 7px;
     margin-top: 1px;
 }
 
