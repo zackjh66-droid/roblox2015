@@ -1,0 +1,18 @@
+{
+ "File": "ROBLOX Battle.rbxl",
+ "Source": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+ "SHA256": "c35dec81de9e305b4443fea86cb98fcb4c89c4bdabf0bdec05bdfd0f2602490f",
+ "Creator": "unverified",
+ "EraEvidence": {
+  "markers": [
+   "BodyColors",
+   "Terrain"
+  ],
+  "post_2013_markers": [
+   "BodyColors"
+  ],
+  "class_count": 70,
+  "basis": "full parsed class/property usage, not a claimed save date"
+ },
+ "ImportNote": "Imported by tools/import_places.py; scripts inventoried, never executed."
+}

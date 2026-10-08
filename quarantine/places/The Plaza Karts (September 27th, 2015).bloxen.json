@@ -1,0 +1,24 @@
+{
+ "File": "The Plaza Karts (September 27th, 2015).rbxl",
+ "Source": "LuaGunsX/RobloxRBXLArchive (github.com/LuaGunsX/RobloxRBXLArchive)",
+ "SHA256": "cc52ff985d57552e80d8443c01527f0eee1aba89ae9d51316c1ed2239c643edb",
+ "Creator": "unverified",
+ "FilenameDateClaim": "September 27th, 2015",
+ "ArchiveAttributedCreator": "unverified",
+ "EraEvidence": {
+  "markers": [
+   "FilteringEnabled",
+   "ParticleEmitter",
+   "StreamingEnabled",
+   "Terrain",
+   "UnionOperation"
+  ],
+  "post_2013_markers": [
+   "FilteringEnabled",
+   "StreamingEnabled"
+  ],
+  "class_count": 73,
+  "basis": "full parsed class/property usage, not a claimed save date"
+ },
+ "ImportNote": "Imported by tools/import_places.py; scripts inventoried, never executed."
+}

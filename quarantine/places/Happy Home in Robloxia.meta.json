@@ -1,0 +1,15 @@
+{
+ "File": "Happy Home in Robloxia.rbxl",
+ "Source": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+ "SHA256": "07dfe978deb68e5200308ad1882d15530aa16ac8f02e87e2bd3977339b4c25d1",
+ "Creator": "unverified",
+ "EraEvidence": {
+  "markers": [
+   "Terrain"
+  ],
+  "post_2013_markers": [],
+  "class_count": 54,
+  "basis": "full parsed class/property usage, not a claimed save date"
+ },
+ "ImportNote": "Imported by tools/import_places.py; scripts inventoried, never executed."
+}

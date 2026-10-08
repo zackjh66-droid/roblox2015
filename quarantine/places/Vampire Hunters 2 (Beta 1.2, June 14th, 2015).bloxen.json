@@ -1,0 +1,19 @@
+{
+ "File": "Vampire Hunters 2 (Beta 1.2, June 14th, 2015).rbxl",
+ "Source": "LuaGunsX/RobloxRBXLArchive (github.com/LuaGunsX/RobloxRBXLArchive)",
+ "SHA256": "4b8b6b2f68777b8b9cad7c0497e522a305a57453616f203a825f90b835cd3d86",
+ "Creator": "unverified",
+ "FilenameDateClaim": "June 14th, 2015",
+ "ArchiveAttributedCreator": "unverified",
+ "EraEvidence": {
+  "markers": [
+   "ParticleEmitter",
+   "Terrain",
+   "UnionOperation"
+  ],
+  "post_2013_markers": [],
+  "class_count": 95,
+  "basis": "full parsed class/property usage, not a claimed save date"
+ },
+ "ImportNote": "Imported by tools/import_places.py; scripts inventoried, never executed."
+}

@@ -65,11 +65,18 @@ class Reader:
         return struct.unpack("<f", struct.pack("<I", rotated))[0]
 
     def interleaved_uint(self, count: int, size: int) -> list[int]:
+        """Interleaved byte-plane big-endian integer array.
+
+        Reference: stream.lua::readInterleavedUInt — each element is assembled as
+        int = int*256 + bytes[plane k] for k = 0..size-1, so plane 0 is the MOST
+        significant byte (big-endian within the element, byte-plane interleaved
+        across the array).
+        """
         planes = [self.read(count) for _ in range(size)]
         out = []
         for i in range(count):
             v = 0
-            for k in range(size - 1, -1, -1):     # big-endian within element
+            for k in range(size):                 # plane 0 = most significant byte
                 v = (v << 8) | planes[k][i]
             out.append(v)
         return out

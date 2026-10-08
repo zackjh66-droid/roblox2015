@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% block title %}{{ game.name }} - BLOXEN runtime{% endblock %}
+{% block content %}
+<div class="blx-runtime" id="blx-runtime"
+     data-game-id="{{ game.id }}"
+     data-game-name="{{ game.name }}"
+     data-game-creator="{{ game.creator }}"
+     data-place-sha="{{ game.place_sha256 or '' }}"
+     data-user="{{ user.username if user else '' }}">
+    <canvas id="blx-canvas"></canvas>
+
+    <div id="blx-loading">
+        <div class="blx-loading-inner">
+            <div class="blx-logo">BLOXEN</div>
+            <div class="blx-loading-game">{{ game.name }}</div>
+            <div class="blx-loading-status" id="blx-load-status">requesting preserved place geometry…</div>
+            <div class="blx-bar"><div class="blx-bar-fill" id="blx-bar-fill"></div></div>
+            <div class="blx-loading-note">
+                Rendering the preserved 2015 place file itself. No geometry, colour or size is invented.
+            </div>
+        </div>
+    </div>
+
+    <!-- 2015-style in-experience top bar (reconstructed chrome; see docs/CLIENT.md) -->
+    <div class="blx-topbar" id="blx-topbar">
+        <div class="blx-topbar-left">
+            <button class="blx-btn blx-btn-menu" id="blx-menu-btn" title="Menu">☰</button>
+            <span class="blx-topbar-brand">BLOXEN</span>
+            <span class="blx-topbar-place">{{ game.name }}</span>
+        </div>
+        <div class="blx-topbar-right">
+            <span class="blx-hud-stat" id="blx-fps">-- fps</span>
+            <span class="blx-hud-stat" id="blx-speed">0 studs/s</span>
+            <button class="blx-btn" id="blx-chat-btn" title="Chat">Chat</button>
+            <button class="blx-btn" id="blx-leave-btn" title="Leave">Leave</button>
+        </div>
+    </div>
+
+    <div class="blx-chat" id="blx-chat">
+        <div class="blx-chat-log" id="blx-chat-log"></div>
+        <div class="blx-chat-input-row">
+            <input id="blx-chat-input" maxlength="120" placeholder="Press Enter to chat…" />
+        </div>
+    </div>
+
+    <div class="blx-playerlist" id="blx-playerlist">
+        <div class="blx-panel-title">Players</div>
+        <div class="blx-player-row"><span class="blx-dot"></span><span id="blx-player-name">{{ user.username if user else 'Guest' }}</span></div>
+        <div class="blx-player-hint">local session (single player)</div>
+    </div>
+
+    <div class="blx-menu" id="blx-menu">
+        <div class="blx-panel-title">Menu
+            <button class="blx-btn blx-btn-close" id="blx-menu-close">✕</button>
+        </div>
+        <div class="blx-menu-body" id="blx-menu-body">
+            <div class="blx-section-title">Place file (real, preserved)</div>
+            <table class="blx-kv" id="blx-meta-table"></table>
+            <div class="blx-section-title">Runtime fidelity</div>
+            <div id="blx-fidelity"></div>
+            <div class="blx-section-title">Controls</div>
+            <div class="blx-controls">
+                <div><b>W A S D</b> move · <b>Space</b> jump · <b>Shift</b> walk</div>
+                <div><b>Right-drag</b> orbit camera · <b>Wheel</b> zoom</div>
+                <div><b>F</b> free camera · <b>O</b> top-down overview · <b>R</b> respawn · <b>M</b> menu · <b>Enter</b> chat</div>
+            </div>
+            <div class="blx-section-title">Options</div>
+            <label class="blx-opt"><input type="checkbox" id="blx-opt-freecam" /> Free camera (noclip)</label>
+            <label class="blx-opt"><input type="checkbox" id="blx-opt-studs" checked /> Draw surface studs / inlets</label>
+            <label class="blx-opt"><input type="checkbox" id="blx-opt-containers" checked /> Include parts stored outside Workspace</label>
+            <label class="blx-opt"><input type="checkbox" id="blx-opt-wedge" /> Flip wedge orientation (evidence A/B toggle)</label>
+            <label class="blx-opt">Graphics
+                <select id="blx-opt-quality">
+                    <option value="high">High</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="low">Low</option>
+                </select>
+            </label>
+            <div class="blx-section-title">Not rendered (honest report)</div>
+            <div id="blx-unsupported"></div>
+            <div class="blx-back"><a href="/games/{{ game.id }}/{{ game.slug }}">← back to place page</a></div>
+        </div>
+    </div>
+</div>
+
+<link rel="stylesheet" href="/static/css/bloxen-runtime.css">
+<script type="module" src="/static/js/bloxen-client.js"></script>
+{% endblock %}

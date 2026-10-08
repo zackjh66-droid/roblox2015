@@ -1,0 +1,18 @@
+{
+ "File": "After The Flash- Standstorm (December 2015).rbxl",
+ "Source": "LuaGunsX/RobloxRBXLArchive (github.com/LuaGunsX/RobloxRBXLArchive)",
+ "SHA256": "60250ef1b6faf2b8217d212d10eea8b96861a673ea868df88fcb586b7a61a67d",
+ "Creator": "unverified",
+ "FilenameDateClaim": "2015",
+ "ArchiveAttributedCreator": "unverified",
+ "EraEvidence": {
+  "markers": [
+   "CustomPhysicalProperties",
+   "Terrain"
+  ],
+  "post_2013_markers": [],
+  "class_count": 81,
+  "basis": "full parsed class/property usage, not a claimed save date"
+ },
+ "ImportNote": "Imported by tools/import_places.py; scripts inventoried, never executed."
+}

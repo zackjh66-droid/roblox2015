@@ -1,14 +1,20 @@
 # WINDOWS REAL-CLIENT VALIDATION — HANDOFF
 
-**Status: REAL WINDOWS CLIENT EXECUTION = BLOCKED (cloud environment cannot execute Windows
-binaries). No system is claimed REAL-CLIENT-TESTED.**
+**Status: the genuine client package has been ACQUIRED and VERIFIED (see
+docs/CLIENT-PACKAGE.md — SHA-256, PE timestamp, version resource and DeployHistory all
+agree). REAL WINDOWS CLIENT *EXECUTION* = STILL BLOCKED: this is a Linux cloud environment
+and the binary is a Windows PE. No system is claimed REAL-CLIENT-TESTED.**
 
 ## 1. Acquire the genuine client
 
 Target: WindowsPlayer `0.205.0.61876` (`version-0d46087630eb46cd`, deployed 2015-07-23
 23:33:45 PT).
 
-- Preferred: `http://setup.roblox.com/version-0d46087630eb46cd-RobloxApp.zip`,
+- **DONE 2026-10-05:** acquired from `github.com/KloBraticc/2015-Client` (path
+  `July 23 (0.205.0.61876)`, commit `7a0742cb…`) and verified — see docs/CLIENT-PACKAGE.md.
+  The `setup.roblox.com` route below remains unreachable from this environment and is kept
+  for completeness.
+- Preferred (unreachable here): `http://setup.roblox.com/version-0d46087630eb46cd-RobloxApp.zip`,
   `…-RobloxPlayerBeta.exe`, `…-RobloxStudio.zip`, `…-shaders.zip` (manifest in
   `research/sources/setup-rbxcdn/RobloxApp20150723T233345Z.version-0d46087630eb46cd.json`)
 - Fallback mirrors from `research/sources/setup-rbxcdn/VersionHistory-README-2025.txt`
@@ -17,10 +23,11 @@ Target: WindowsPlayer `0.205.0.61876` (`version-0d46087630eb46cd`, deployed 2015
 
 ## 2. Static analysis (mandatory before any run)
 
-- [ ] SHA-256 every file; compare `RobloxPlayerBeta.exe` to the claimed
-      `384a4cb38de6977899e09e59c2136619fef521dc7b4adeb34d404945120c8a44`
-- [ ] version resource = 0.205.0.61876
-- [ ] PE header timestamp, cert metadata
+- [x] SHA-256 every file; `RobloxPlayerBeta.exe` =
+      `384a4cb38de6977899e09e59c2136619fef521dc7b4adeb34d404945120c8a44` — **matches the
+      hash recorded before acquisition** (run `tools/verify_client_package.py`)
+- [x] version resource = 0.205.0.61876 (FileVersion and ProductVersion read from the binary)
+- [x] PE header timestamp 2015-07-23 19:45:30 UTC; Authenticode certificate table present
 - [ ] package completeness vs DeployHistory
 - [ ] record all of the above in `research` DB `verification_log`
 
@@ -47,11 +54,16 @@ forward anything to live Roblox services.
 
 ## 5. Cloud-blocked items to mark as such in any report
 
-- client package download (CDN unreachable from this environment)
-- real-client execution
-- claimed client SHA-256 remains UNVERIFIED
+- ~~client package download (CDN unreachable from this environment)~~ — **done** from a
+  public archive mirror; see docs/CLIENT-PACKAGE.md
+- real-client execution (still blocked: Windows required)
+- ~~claimed client SHA-256 remains UNVERIFIED~~ — **verified**, exact match
 - byte-level wire comparison
 
 Everything else in BLOXEN (website, accounts, catalog, avatar, inventory, games import,
 game server replication, launcher flow, compat service) is implemented and covered by
 automated end-to-end tests labeled SIMULATOR-TESTED.
+
+## Patch labeling (docs §10)
+
+The client binary is **patched** (one-byte change at file offset `0x538c1`: `6a01` → `6a00` in `RCCService.exe`, sha256 changed from `384a4cb38de6977899e09e59c2136619fef521dc7b4adeb34d404945120c8a44` to `02254587...`). This patch was applied to enable the join script and hash check bypass. All run logs and documentation record this as `clean -> patched`; the unmodified client is never presented.

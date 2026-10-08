@@ -1,0 +1,26 @@
+{
+ "File": "The Normal Elevator - Fixed for 2015M.rbxl",
+ "Source": "LuaGunsX/RobloxRBXLArchive (github.com/LuaGunsX/RobloxRBXLArchive)",
+ "SHA256": "e2eab5df527ce7889c67b5c7a668fd870738bcdbdf8fd5c5dfb85fc2460246d0",
+ "Creator": "unverified",
+ "FilenameDateClaim": "none",
+ "ArchiveAttributedCreator": "NowDoTheHarlemShake",
+ "EraEvidence": {
+  "markers": [
+   "Animator",
+   "BodyColors",
+   "FilteringEnabled",
+   "StreamingEnabled",
+   "Terrain",
+   "UnionOperation"
+  ],
+  "post_2013_markers": [
+   "FilteringEnabled",
+   "StreamingEnabled",
+   "BodyColors"
+  ],
+  "class_count": 105,
+  "basis": "full parsed class/property usage, not a claimed save date"
+ },
+ "ImportNote": "Imported by tools/import_places.py; scripts inventoried, never executed."
+}

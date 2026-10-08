@@ -1,0 +1,2411 @@
+{
+ "source_repos": [
+  "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+  "LuaGunsX/RobloxRBXLArchive (github.com/LuaGunsX/RobloxRBXLArchive)"
+ ],
+ "candidates": {
+  "4d7047d9aa9ac54e": {
+   "file": "12pack's Place.rbxl",
+   "sha256": "4d7047d9aa9ac54e09977af2164bffc6a5810f18b841e52315321a65c115fe82",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 6249042,
+   "format": "rbxl-xml",
+   "markers": [],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "1b54db896af7f896": {
+   "file": "2006 Doll Place.rbxl",
+   "sha256": "1b54db896af7f896d886c51c9216b6b06af5f97faec407ddfa32452d6304fd1e",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 132893,
+   "format": "rbxl-xml",
+   "markers": [
+    "HopperBin",
+    "Script"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "386e06aae443e9e5": {
+   "file": "2006 Grey City.rbxl",
+   "sha256": "386e06aae443e9e5e3e9edbbf1a0e0aeb416c754f14fc39386ee1677436cc783",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 15501174,
+   "format": "rbxl-xml",
+   "markers": [],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "a4fbc129220b2495": {
+   "file": "2006 Pirate Army HQ.rbxl",
+   "sha256": "a4fbc129220b24952b3b9f999b738ee53d4ce3e06a33b2a38f18f18e58f5df33",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 6877361,
+   "format": "rbxl-xml",
+   "markers": [
+    "Humanoid"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "baff5e8e376e7a52": {
+   "file": "2006 Slides.rbxl",
+   "sha256": "baff5e8e376e7a5256bdbdd3f0e2b46c229797b64cff3867262156276192c1ce",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 295115,
+   "format": "rbxl-xml",
+   "markers": [
+    "HopperBin",
+    "Script",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "76c1cffbe4185134": {
+   "file": "2011 Grave Yard.rbxl",
+   "sha256": "76c1cffbe4185134788747f9d38e1d66647185384a6f17818c8a7f9e90f14e88",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 58012,
+   "format": "rbxl-xml",
+   "markers": [
+    "HopperBin",
+    "Script",
+    "Terrain"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "63afca7ae833d0c8": {
+   "file": "ArmouredShipBattle.rbxl",
+   "sha256": "63afca7ae833d0c8e6f4aa4fb826e7db9074035611492a3443deeb2ed4a80490",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 10392186,
+   "format": "rbxl-xml",
+   "markers": [
+    "HopperBin",
+    "Humanoid",
+    "Script"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "6e298441cb39fdff": {
+   "file": "Astroland.rbxl",
+   "sha256": "6e298441cb39fdffa8d6876187a03d779824a4728f2054f3cd64b148c0301364",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 1630148,
+   "format": "rbxl-xml",
+   "markers": [
+    "Terrain"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "5494547b89a037f2": {
+   "file": "Autumn.rbxl",
+   "sha256": "5494547b89a037f2e3357ddd650f5ce7f8a9de9f033799dfde8e42bd9249a432",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 7572615,
+   "format": "rbxl-xml",
+   "markers": [
+    "Script"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "44b13cd44f24f6db": {
+   "file": "Base Wars.rbxl",
+   "sha256": "44b13cd44f24f6db8e73ad2cedaa69805181c7d6876364fbaf5c93dd643dd298",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 7539910,
+   "format": "rbxl-xml",
+   "markers": [
+    "BodyColors",
+    "Humanoid",
+    "Script",
+    "Terrain",
+    "Value"
+   ],
+   "era_inferred_at_least": 2014,
+   "status": "imported",
+   "imported_as": {
+    "game_id": 9,
+    "name": "Base Wars",
+    "sha256": "44b13cd44f24f6db8e73ad2cedaa69805181c7d6876364fbaf5c93dd643dd298"
+   },
+   "era_evidence": {
+    "markers": [
+     "BodyColors",
+     "Terrain"
+    ],
+    "post_2013_markers": [
+     "BodyColors"
+    ],
+    "class_count": 73,
+    "property_sample": 183
+   }
+  },
+  "ba8bc3ab9eb80bbe": {
+   "file": "BaseWars.rbxl",
+   "sha256": "ba8bc3ab9eb80bbe348bd37db6e9fc2a6b9660e6b07dfe799241d8e47261ebe5",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 7911701,
+   "format": "rbxl-xml",
+   "markers": [
+    "Humanoid",
+    "Script",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "6d43ecade240f65d": {
+   "file": "Be crushed by speeding wall.rbxl",
+   "sha256": "6d43ecade240f65d5d30fa71f04fc2e7cc7b220ff806e952f1f701fb83577629",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 5099710,
+   "format": "rbxl-xml",
+   "markers": [
+    "Hint",
+    "Humanoid",
+    "Script",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "a20ac0d84e4161a2": {
+   "file": "Build Your Own Plane!(Read the rules)FIXED!.rbxl",
+   "sha256": "a20ac0d84e4161a210efa191aa7526b73066f8775c643e7bde7093e0face5166",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 3784393,
+   "format": "rbxl-xml",
+   "markers": [],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "b15765915c12f6bd": {
+   "file": "BuildAndRace.rbxl",
+   "sha256": "b15765915c12f6bd6c65e07c195f9aa63d9da84f5552a677ae9c68d2d0b85c4a",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 22713113,
+   "format": "rbxl-xml",
+   "markers": [
+    "Terrain",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "1af0c4748c8b81bd": {
+   "file": "Builderman Suite.rbxl",
+   "sha256": "1af0c4748c8b81bd42a45633275351a30f45d133985d4a07cbfe1834fa64dbc3",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 24059063,
+   "format": "rbxl-xml",
+   "markers": [
+    "Hint",
+    "Humanoid",
+    "Script",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "9ca1a1b8f3b317b9": {
+   "file": "Builderman's Vacation Sim! Relax to Survive!.rbxl",
+   "sha256": "9ca1a1b8f3b317b90dc5d89e799130512b203c258b4810104b30d6eceb42280a",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 182858,
+   "format": "rbxl-xml",
+   "markers": [
+    "Hint",
+    "HopperBin",
+    "Humanoid",
+    "Script",
+    "Terrain",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "c55b01b76125ce6b": {
+   "file": "Building with Friends.rbxl",
+   "sha256": "c55b01b76125ce6bbda7b4813d30d592f08a453215008e34fc3604352a841d4e",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 27766,
+   "format": "rbxl-xml",
+   "markers": [
+    "BodyColors",
+    "Humanoid",
+    "Script",
+    "Terrain",
+    "Value"
+   ],
+   "era_inferred_at_least": 2014,
+   "status": "imported",
+   "imported_as": {
+    "game_id": 14,
+    "name": "Building with Friends",
+    "sha256": "c55b01b76125ce6bbda7b4813d30d592f08a453215008e34fc3604352a841d4e"
+   },
+   "era_evidence": {
+    "markers": [
+     "BodyColors",
+     "Terrain"
+    ],
+    "post_2013_markers": [
+     "BodyColors"
+    ],
+    "class_count": 39,
+    "property_sample": 97
+   }
+  },
+  "3f9dec8bf2f9e446": {
+   "file": "Canyon Wars.rbxl",
+   "sha256": "3f9dec8bf2f9e446e0412b77a251542f277b76a4cfcff07e0f543a8804de3e25",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 2139598,
+   "format": "rbxl-xml",
+   "markers": [
+    "Humanoid",
+    "Script",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "d3ac92b8dc7b9fd3": {
+   "file": "Castle Warfare.rbxl",
+   "sha256": "d3ac92b8dc7b9fd3c9fb2c7c2fb3747d59e259af476b50da55d00bef0d2b9053",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 60053,
+   "format": "rbxl-xml",
+   "markers": [
+    "HopperBin",
+    "Humanoid",
+    "Script",
+    "Terrain",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "dcc4d08eeac15818": {
+   "file": "Chao World!!! (read desc. or else!!).rbxl",
+   "sha256": "dcc4d08eeac1581805a76b69f608b2e27a2ba92aa109485b574dc137a9591dd8",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 2440211,
+   "format": "rbxl-xml",
+   "markers": [
+    "Humanoid"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "7178b3d3c930d45e": {
+   "file": "Chaos Canyon.rbxl",
+   "sha256": "7178b3d3c930d45e18f2309037aa153ca717a088f8ce70e3863abe786116ce6f",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 67400,
+   "format": "rbxl-xml",
+   "markers": [
+    "Script",
+    "Terrain",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "677d292738ed0cb1": {
+   "file": "Classic Basplate.rbxl",
+   "sha256": "677d292738ed0cb14daa4d2c063a7bdc938271a657af425aa84bd7ab97f624f7",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 211583,
+   "format": "rbxl-xml",
+   "markers": [
+    "Animator",
+    "FilteringEnabled",
+    "Humanoid",
+    "MeshPart",
+    "R15",
+    "Script",
+    "StreamingEnabled",
+    "Terrain",
+    "UnionOperation",
+    "Value"
+   ],
+   "era_inferred_at_least": 2016,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "1b5c73cf2d2958f4": {
+   "file": "Community Construction.rbxl",
+   "sha256": "1b5c73cf2d2958f483ff32c8639d48548c265b256339ff5a8031178253dd55ff",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 20167,
+   "format": "rbxl-xml",
+   "markers": [
+    "Script",
+    "Terrain",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "52863692d9672c92": {
+   "file": "Contamination.rbxl",
+   "sha256": "52863692d9672c9275d7ce3a78ad8ffff15b2ac4b0c3696a5d41b5b1a991a3f0",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 8288451,
+   "format": "rbxl-xml",
+   "markers": [
+    "BodyColors",
+    "Humanoid",
+    "Script",
+    "Value"
+   ],
+   "era_inferred_at_least": 2014,
+   "status": "imported",
+   "imported_as": {
+    "game_id": 8,
+    "name": "Contamination",
+    "sha256": "52863692d9672c9275d7ce3a78ad8ffff15b2ac4b0c3696a5d41b5b1a991a3f0"
+   },
+   "era_evidence": {
+    "markers": [
+     "BodyColors",
+     "Terrain"
+    ],
+    "post_2013_markers": [
+     "BodyColors"
+    ],
+    "class_count": 61,
+    "property_sample": 167
+   }
+  },
+  "458e95fb8df9c7ca": {
+   "file": "Creed.rbxl",
+   "sha256": "458e95fb8df9c7cad13ae304b575dffdf8ff9d20e8d46cc00c1d6b3d0123f71f",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 7299831,
+   "format": "rbxl-xml",
+   "markers": [
+    "Hint",
+    "HopperBin",
+    "Humanoid",
+    "Script",
+    "Terrain",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "6c18eb45d9f6039d": {
+   "file": "Crossroads (2006).rbxl",
+   "sha256": "6c18eb45d9f6039d910ce8c7c43c1521b86012d04f13a3a85a13dafddd97ed7f",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 4596011,
+   "format": "rbxl-xml",
+   "markers": [
+    "Humanoid",
+    "Script",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "14c75f898a798226": {
+   "file": "Crossroads with bricks.rbxl",
+   "sha256": "14c75f898a7982266d094bdc1600c06806f7ba915e5217a72f1b8856c2a35611",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 4443443,
+   "format": "rbxl-xml",
+   "markers": [
+    "Humanoid",
+    "Script",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "acec28f504e6dc13": {
+   "file": "Crossroads.rbxl",
+   "sha256": "acec28f504e6dc130a2409b95a01d72882d3503f0abc91d81368a0ac839e0edf",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 4401117,
+   "format": "rbxl-xml",
+   "markers": [
+    "Humanoid",
+    "Script",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "640edcfdc24a8eb4": {
+   "file": "DeadSpace.rbxl",
+   "sha256": "640edcfdc24a8eb4c0f8fbbdf5fd590300d364d4485d1cb4b645945018650c0b",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 15839929,
+   "format": "rbxl-xml",
+   "markers": [
+    "Humanoid",
+    "Script",
+    "Terrain",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "89634634357c30ee": {
+   "file": "Destruction Derby Original xml.rbxl",
+   "sha256": "89634634357c30ee4ed16b272fc814c035f70710ba938bbf3bc6f539fb1b2f9a",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 1472340,
+   "format": "rbxl-xml",
+   "markers": [
+    "Humanoid",
+    "Script",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "0dca54a5d01e731c": {
+   "file": "Doctorhj's random place 5% done .rbxl",
+   "sha256": "0dca54a5d01e731c35c9197399a503d796bac6735193b9b2491be45990d528a4",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 7954109,
+   "format": "rbxl-xml",
+   "markers": [],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "bea405bfa1fb05c2": {
+   "file": "Dodge Stuff.rbxl",
+   "sha256": "bea405bfa1fb05c2f11ed6a8199f7ebfb3ee6c2d4c4433412c4352c8a2fa230d",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 1512243,
+   "format": "rbxl-xml",
+   "markers": [
+    "Humanoid",
+    "Script",
+    "Terrain",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "c8f3aa0ba564cc6a": {
+   "file": "Domo Island Tycoon.rbxl",
+   "sha256": "c8f3aa0ba564cc6a66bed4eb98fded7458d94ac08d62281c78e256dd3cf1b0b7",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 25646069,
+   "format": "rbxl-xml",
+   "markers": [
+    "Humanoid",
+    "Script",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "bbb0582f55a7a07a": {
+   "file": "DoomSpire Tower Battle.rbxl",
+   "sha256": "bbb0582f55a7a07a1c7fd7ab8433e0a548c742bb02b75a4f6b11be0b76b29929",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 8826428,
+   "format": "rbxl-xml",
+   "markers": [],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "f74c23c6028adf62": {
+   "file": "Dragon Ball Z Online Adventures..rbxl",
+   "sha256": "f74c23c6028adf6219bbcb2d48b335afafdf6cdaa923597be1650ae10870a2ec",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 4890292,
+   "format": "rbxl-xml",
+   "markers": [],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "4e4b13b016ead476": {
+   "file": "Eat Or Make The Food For Mc.Donalds Or PizzaHut!.rbxl",
+   "sha256": "4e4b13b016ead4768eb52b082f90b361a31c3deec77199a022018e3897086b90",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 2278808,
+   "format": "rbxl-xml",
+   "markers": [
+    "Humanoid",
+    "Script"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "13d8b1949df2991e": {
+   "file": "Elemental Lake.rbxl",
+   "sha256": "13d8b1949df2991ed5ab5439ec3add9c4fb8c65278f82c5e8fec1daf0a363983",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 80526,
+   "format": "rbxl-xml",
+   "markers": [
+    "Hint",
+    "HopperBin",
+    "Humanoid",
+    "Script",
+    "Terrain",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "a65ff6dc86934a56": {
+   "file": "Emerald Forest.rbxl",
+   "sha256": "a65ff6dc86934a5610675333e3df02840f7d652214eb924f0d5b6864df63f6ed",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 47909,
+   "format": "rbxl-xml",
+   "markers": [
+    "HopperBin",
+    "Script",
+    "Terrain",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "559c6ee6c28cab67": {
+   "file": "Falling Crossroads.rbxl",
+   "sha256": "559c6ee6c28cab6765c5b3de8a6b5a360e8ba95190473e4cce9145357551d1a6",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 4563534,
+   "format": "rbxl-xml",
+   "markers": [
+    "Humanoid",
+    "Script",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "369c647137e4f52d": {
+   "file": "Falling Crossroads2.rbxl",
+   "sha256": "369c647137e4f52dded8f88dfdffe3c289341fab3dad17bbc516030804b2d061",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 4562208,
+   "format": "rbxl-xml",
+   "markers": [
+    "Humanoid",
+    "Script",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "80795b32f6fb76ad": {
+   "file": "Fort For Sale 8.rbxl",
+   "sha256": "80795b32f6fb76adf2f7fd264ce1fba7b7d53876866c8afd582bf1d1dd61f8fa",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 6932840,
+   "format": "rbxl-xml",
+   "markers": [
+    "Script",
+    "Terrain"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "a882299baab80978": {
+   "file": "Four Towers Bridge Battle.rbxl",
+   "sha256": "a882299baab80978b6a081ae82dc0026dda48ea59b08a1d2aa0d934136bb01f7",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 64261,
+   "format": "rbxl-xml",
+   "markers": [
+    "HopperBin",
+    "Script",
+    "Terrain",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "34998792b6a003b3": {
+   "file": "GGR-Capital-City-Coruscant.rbxl",
+   "sha256": "34998792b6a003b35cceb3d96d7663dbcb6999919d1795b86f8afe86e0a2eec7",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 22685588,
+   "format": "rbxl-xml",
+   "markers": [
+    "Hint",
+    "HopperBin",
+    "Humanoid",
+    "Script",
+    "Terrain",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "c9cbe9526e12fe3b": {
+   "file": "Garnold Survival Apocalypse.rbxl",
+   "sha256": "c9cbe9526e12fe3b3db9fdf5c59619128839c79803abbc3bb40c4dba579fdeea",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 14224680,
+   "format": "rbxl-xml",
+   "markers": [
+    "Hint",
+    "HopperBin",
+    "Humanoid",
+    "Script",
+    "Terrain",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "204113cf5a1b52f8": {
+   "file": "Glass Houses.rbxl",
+   "sha256": "204113cf5a1b52f844d92b8d67a491a7dd51f9ca09fb766ff97c432526db3101",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 46251,
+   "format": "rbxl-xml",
+   "markers": [
+    "HopperBin",
+    "Script",
+    "Terrain",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "3198857261c99b18": {
+   "file": "GollyGreg building tool.rbxl",
+   "sha256": "3198857261c99b1891e55e28b62ec9d1e7b1e5ba4570d00d96406de927380da2",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 1603323,
+   "format": "rbxl-xml",
+   "markers": [
+    "Script",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "57475b1d15ae6e5a": {
+   "file": "Grave Yard.rbxl",
+   "sha256": "57475b1d15ae6e5a2afcbe914287b5b2044a73edc03f2468b1de3be7378ca0b3",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 174545,
+   "format": "rbxl-xml",
+   "markers": [],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "07dfe978deb68e52": {
+   "file": "Happy Home in Robloxia.rbxl",
+   "sha256": "07dfe978deb68e5200308ad1882d15530aa16ac8f02e87e2bd3977339b4c25d1",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 728442,
+   "format": "rbxl-xml",
+   "markers": [
+    "R15",
+    "Script",
+    "Terrain",
+    "Value"
+   ],
+   "era_inferred_at_least": 2015,
+   "status": "imported",
+   "imported_as": {
+    "game_id": 10,
+    "name": "Happy Home in Robloxia",
+    "sha256": "07dfe978deb68e5200308ad1882d15530aa16ac8f02e87e2bd3977339b4c25d1"
+   },
+   "era_evidence": {
+    "markers": [
+     "Terrain"
+    ],
+    "post_2013_markers": [],
+    "class_count": 54,
+    "property_sample": 123
+   }
+  },
+  "91ffda80a0a2550b": {
+   "file": "HappyHomeInRobloxia.rbxl",
+   "sha256": "91ffda80a0a2550bfbee06f8ebd08cd1c95bf38694eb94d68cc022f0877fc306",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 6027487,
+   "format": "rbxl-xml",
+   "markers": [],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "aa62032f24309641": {
+   "file": "Haunted Mansion.rbxl",
+   "sha256": "aa62032f243096418c63d802819d73db0f3ed2fed59a0b95b63f9f19de193f06",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 62649,
+   "format": "rbxl-xml",
+   "markers": [
+    "HopperBin",
+    "Humanoid",
+    "Script",
+    "Terrain",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "983a237ae80f4271": {
+   "file": "Helghast-Legion-Autarches-Palace.rbxl",
+   "sha256": "983a237ae80f4271db9bdcfd36b8d0161bd02bc6d4f51642a4dcbc224b6a8e05",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 14006064,
+   "format": "rbxl-xml",
+   "markers": [
+    "Humanoid",
+    "Script",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "d681cfd73c2a62e0": {
+   "file": "Hide and seek - Lance7.rbxl",
+   "sha256": "d681cfd73c2a62e00ddd1e7f70f24c3e783a8e7fc15b73c0965d200402074300",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 7421957,
+   "format": "rbxl-xml",
+   "markers": [
+    "Humanoid",
+    "Script",
+    "Terrain",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "9f377c35983cb504": {
+   "file": "House (2009).rbxl",
+   "sha256": "9f377c35983cb504342ddaf5d2e5cce40bc19414fc763ada5f71e5675ceb096c",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 1960761,
+   "format": "rbxl-xml",
+   "markers": [],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "0d615f0e8f6969cb": {
+   "file": "Laser Tanks 2.0.rbxl",
+   "sha256": "0d615f0e8f6969cb159a84cd67864df9547085a401b9cec251264a0c63bff62c",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 5710190,
+   "format": "rbxl-xml",
+   "markers": [
+    "Humanoid",
+    "Script",
+    "Terrain",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "595c200a37102b6d": {
+   "file": "Lumber-Tycoon.rbxl",
+   "sha256": "595c200a37102b6dbf17f8030102e712977967df0091707f91007df7d5226917",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 127405,
+   "format": "rbxl-xml",
+   "markers": [
+    "FilteringEnabled",
+    "Hint",
+    "HopperBin",
+    "Humanoid",
+    "Script",
+    "StreamingEnabled",
+    "Terrain",
+    "Value"
+   ],
+   "era_inferred_at_least": 2013,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "f329d165857d0563": {
+   "file": "Make your own PLANE\u00b3! with Coster and Bowling.rbxl",
+   "sha256": "f329d165857d05634710ac9dd634b5797052bb7474d9732d73f4ff39093b17ce",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 6223316,
+   "format": "rbxl-xml",
+   "markers": [
+    "Humanoid",
+    "R15",
+    "Script",
+    "Value"
+   ],
+   "era_inferred_at_least": 2015,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "b3f395bfb35b943e": {
+   "file": "Marshall-Point-Lighthouse.rbxl",
+   "sha256": "b3f395bfb35b943eeda66227fd6c9c527870e8fb3dd4f4df149fca61af0e13e5",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 232141,
+   "format": "rbxl-xml",
+   "markers": [
+    "FilteringEnabled",
+    "Script",
+    "StreamingEnabled",
+    "Terrain",
+    "UnionOperation",
+    "Value"
+   ],
+   "era_inferred_at_least": 2013,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "44cdda80ef199e9f": {
+   "file": "Martian Invasion.rbxl",
+   "sha256": "44cdda80ef199e9fd051a9472cec9c470343cb89af6ab08b0bf2b051f2288c4c",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 128086,
+   "format": "rbxl-xml",
+   "markers": [
+    "BodyColors",
+    "HopperBin",
+    "Humanoid",
+    "Script",
+    "Terrain",
+    "Value"
+   ],
+   "era_inferred_at_least": 2014,
+   "status": "imported",
+   "imported_as": {
+    "game_id": 13,
+    "name": "Martian Invasion",
+    "sha256": "44cdda80ef199e9fd051a9472cec9c470343cb89af6ab08b0bf2b051f2288c4c"
+   },
+   "era_evidence": {
+    "markers": [
+     "BodyColors",
+     "Terrain"
+    ],
+    "post_2013_markers": [
+     "BodyColors"
+    ],
+    "class_count": 49,
+    "property_sample": 129
+   }
+  },
+  "a356f1e5692b68fa": {
+   "file": "Medieval Mountains.rbxl",
+   "sha256": "a356f1e5692b68fae95c258c704e22c3570d79b1b88ed65c8ae1a8b3884cc8eb",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 20820803,
+   "format": "rbxl-xml",
+   "markers": [
+    "Humanoid",
+    "Script",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "3dc974b5788fdeb9": {
+   "file": "Millons of roblox. Kill them.rbxl",
+   "sha256": "3dc974b5788fdeb9bacf7248560eaa1220f887ed51375d65d9c430fb0f927132",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 9240629,
+   "format": "rbxl-xml",
+   "markers": [],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "ebc7fdba40b45e2a": {
+   "file": "Mjolnir.rbxl",
+   "sha256": "ebc7fdba40b45e2a1cd192d9fe0d60d1e58b47904253d36de663211f0e33e3ed",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 14574876,
+   "format": "rbxl-xml",
+   "markers": [
+    "Terrain"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "ef8c446bb88b4509": {
+   "file": "Mod-Venture.rbxl",
+   "sha256": "ef8c446bb88b4509c60228a5d266f29850ff88a6303e137e4f1105c8dabb855d",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 19560572,
+   "format": "rbxl-xml",
+   "markers": [
+    "Script",
+    "Terrain"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "9dd0a01e39083093": {
+   "file": "Naruto battlegrounds - mastrj.rbxl",
+   "sha256": "9dd0a01e390830934f5fe8c9220119abd06323c4b466ac457a68b7aa5456fd36",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 2945652,
+   "format": "rbxl-xml",
+   "markers": [
+    "Hint",
+    "Humanoid",
+    "Script",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "da90bd8d0892a609": {
+   "file": "Natural Disaster Survival.rbxl",
+   "sha256": "da90bd8d0892a6093ab0489efd73d89efbd6df851d5b9bf3208bdddb6f5a3933",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 20796228,
+   "format": "rbxl-xml",
+   "markers": [
+    "Hint",
+    "HopperBin",
+    "Humanoid",
+    "Script",
+    "Terrain",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "dd88fe9e06f6900e": {
+   "file": "Ninjas vs. Samurai Pagoda Battle.rbxl",
+   "sha256": "dd88fe9e06f6900e312481f012ff763f2c30b581dfb35d92a6848c38cc7d2f2a",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 96668,
+   "format": "rbxl-xml",
+   "markers": [
+    "HopperBin",
+    "Humanoid",
+    "Script",
+    "Terrain",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "3542343d9b5ae3a2": {
+   "file": "NoobTrapOne.rbxl",
+   "sha256": "3542343d9b5ae3a2f9d188f05ed521cdd18b2f15c383bf7c1fad916bd0aa98c5",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 19567730,
+   "format": "rbxl-xml",
+   "markers": [
+    "Humanoid",
+    "Script",
+    "Terrain",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "425469249b6a7604": {
+   "file": "PFCity.rbxl",
+   "sha256": "425469249b6a7604257e57a3067bafe11a29d2bc2a9d8bef1ae800152a2f9bba",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 17027368,
+   "format": "rbxl-xml",
+   "markers": [],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "0c764368c9f874d9": {
+   "file": "Perlious Skies.rbxl",
+   "sha256": "0c764368c9f874d9e588df7f8be5aa216333c7d97c0b0eaef72cdf515efff4f6",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 3880391,
+   "format": "rbxl-xml",
+   "markers": [
+    "Script",
+    "Terrain",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "0bcd465d5eb66f68": {
+   "file": "Person299 minigames..rbxl",
+   "sha256": "0bcd465d5eb66f687919c18721b1951a1a949d377d40cf77c17e1075ea12f72f",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 10628802,
+   "format": "rbxl-xml",
+   "markers": [
+    "Hint",
+    "HopperBin",
+    "Humanoid",
+    "Script",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "f598d3b74e0d66d8": {
+   "file": "Pinball Wizards.rbxl",
+   "sha256": "f598d3b74e0d66d8c1fdb600d2f3894c21600209596c985b198edef2f384709b",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 22651,
+   "format": "rbxl-xml",
+   "markers": [
+    "Script",
+    "Terrain",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "f252782fac0b019d": {
+   "file": "Pirate Army HQ.rbxl",
+   "sha256": "f252782fac0b019d0ae7125ec5780099dff4b8647e048f09d52b855cb7cda5fb",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 7192465,
+   "format": "rbxl-xml",
+   "markers": [
+    "Humanoid"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "fa76abc991dc0268": {
+   "file": "ROBLOX Base Wars FPS.rbxl",
+   "sha256": "fa76abc991dc0268d2f519b01e3281ee5f0b130681fb5b45eeafc30a0fc17fbe",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 230684,
+   "format": "rbxl-xml",
+   "markers": [
+    "Humanoid",
+    "Script",
+    "Terrain",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "c35dec81de9e305b": {
+   "file": "ROBLOX Battle.rbxl",
+   "sha256": "c35dec81de9e305b4443fea86cb98fcb4c89c4bdabf0bdec05bdfd0f2602490f",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 289120,
+   "format": "rbxl-xml",
+   "markers": [
+    "BodyColors",
+    "Hint",
+    "Humanoid",
+    "Script",
+    "Terrain",
+    "Value"
+   ],
+   "era_inferred_at_least": 2014,
+   "status": "imported",
+   "imported_as": {
+    "game_id": 12,
+    "name": "ROBLOX Battle",
+    "sha256": "c35dec81de9e305b4443fea86cb98fcb4c89c4bdabf0bdec05bdfd0f2602490f"
+   },
+   "era_evidence": {
+    "markers": [
+     "BodyColors",
+     "Terrain"
+    ],
+    "post_2013_markers": [
+     "BodyColors"
+    ],
+    "class_count": 70,
+    "property_sample": 163
+   }
+  },
+  "ca4d153e3ea58674": {
+   "file": "ROBLOX Derby.rbxl",
+   "sha256": "ca4d153e3ea58674f982ab52172369eea0042279d2ec93b65c21d2675c6b1ff1",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 20299976,
+   "format": "rbxl-xml",
+   "markers": [
+    "Hint",
+    "Script",
+    "Terrain",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "692b8cdfefde27a4": {
+   "file": "ROBLOX World Headquarters.rbxl",
+   "sha256": "692b8cdfefde27a4d44c4606d3638776c58521c8236a51827c7e99bde23e9b48",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 83817,
+   "format": "rbxl-xml",
+   "markers": [
+    "HopperBin",
+    "Humanoid",
+    "Script",
+    "Terrain",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "ece2f80c51f053c7": {
+   "file": "ROBLOX evil game idk - stolen.rbxl",
+   "sha256": "ece2f80c51f053c7c779bab155d8250cc6689c35b89d7183e806bead843809b9",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 18517159,
+   "format": "rbxl-xml",
+   "markers": [
+    "Hint",
+    "Humanoid",
+    "Script",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "82cb911e24a84fe2": {
+   "file": "Raise a dancing banana - MARIOSTAR6464.rbxl",
+   "sha256": "82cb911e24a84fe2e64732c8d0cdbc0edeacec92790b94f9389b8d30dd34fd39",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 1407981,
+   "format": "rbxl-xml",
+   "markers": [
+    "Hint",
+    "Humanoid",
+    "Script",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "5a74b1cb189183f7": {
+   "file": "Ro-Quake DM17 - The Longest Yard.rbxl",
+   "sha256": "5a74b1cb189183f7b119157fb1c878128f6b19e5d63be66da4779001bfb2398d",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 102400,
+   "format": "rbxl-xml",
+   "markers": [
+    "Humanoid",
+    "Script",
+    "Terrain",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "fa2541f4eace38c5": {
+   "file": "Roblox City.rbxl",
+   "sha256": "fa2541f4eace38c512d94eca5026cb3c107adf9c7fce0c1a92133c003672ed0c",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 4743539,
+   "format": "rbxl-xml",
+   "markers": [
+    "Humanoid",
+    "Script"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "265afe622969ca39": {
+   "file": "Roblox HQ 2.0.rbxl",
+   "sha256": "265afe622969ca39d45c365798974c8eeb5dbce75e384101134280e6ab0afaed",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 57325,
+   "format": "rbxl-xml",
+   "markers": [
+    "HopperBin",
+    "Script",
+    "Terrain"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "1465aa7d30d3f677": {
+   "file": "Roblox HQ.rbxl",
+   "sha256": "1465aa7d30d3f67792dee211ad9131171749d3f198190bbc785890bd5bca95cc",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 18891374,
+   "format": "rbxl-xml",
+   "markers": [
+    "Script"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "aaec98c3ff916191": {
+   "file": "RobloxHQ.rbxl",
+   "sha256": "aaec98c3ff916191afe00f9021d641a20bf0278290c0180c9061e2fa25a914db",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 21043177,
+   "format": "rbxl-xml",
+   "markers": [],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "93feee906a0cc1ef": {
+   "file": "Rocket Arena.rbxl",
+   "sha256": "93feee906a0cc1ef84341726ca342e4c16bb9cefcd0c22851b746e93ad905386",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 4493032,
+   "format": "rbxl-xml",
+   "markers": [],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "1f509e492cd1d4a3": {
+   "file": "Rocket Fight Advanced.rbxl",
+   "sha256": "1f509e492cd1d4a37e4d30f4c51b9984f5bdf4036111c0c076ee47cf4a41922a",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 21084,
+   "format": "rbxl-xml",
+   "markers": [
+    "HopperBin",
+    "R15",
+    "Script",
+    "Terrain",
+    "Value"
+   ],
+   "era_inferred_at_least": 2015,
+   "status": "imported",
+   "imported_as": {
+    "game_id": 11,
+    "name": "Rocket Fight Advanced",
+    "sha256": "1f509e492cd1d4a37e4d30f4c51b9984f5bdf4036111c0c076ee47cf4a41922a"
+   },
+   "era_evidence": {
+    "markers": [
+     "Terrain"
+    ],
+    "post_2013_markers": [],
+    "class_count": 44,
+    "property_sample": 115
+   }
+  },
+  "f8b26ba7a85202e6": {
+   "file": "S4 League - Station-1.rbxl",
+   "sha256": "f8b26ba7a85202e64ceec75f2b46098ea3e51a396b1dfe38d874c9d0298fa68a",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 1683774,
+   "format": "rbxl-xml",
+   "markers": [
+    "Hint",
+    "Humanoid",
+    "Script",
+    "Terrain",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "66648f3e965cb1d8": {
+   "file": "SCR Base.rbxl",
+   "sha256": "66648f3e965cb1d81ab6bb8f44a7406bba8863495bda313b942e05a027dda2ee",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 18622554,
+   "format": "rbxl-xml",
+   "markers": [
+    "BodyColors",
+    "Humanoid",
+    "Script",
+    "Terrain",
+    "Value"
+   ],
+   "era_inferred_at_least": 2014,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "5c1c880914fad7eb": {
+   "file": "SSA( Saint Scholastic Acdamy ).rbxl",
+   "sha256": "5c1c880914fad7eb3b6e293756a03e8c3e6c53cfc5060369691184a7c4195a53",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 4446710,
+   "format": "rbxl-xml",
+   "markers": [
+    "Script"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "e1219fd70ec09fd6": {
+   "file": "Sandbox - REDALERT2.rbxl",
+   "sha256": "e1219fd70ec09fd6615a3c270d72170a969589fe816695b6953f34e6ec0b00e9",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 19246098,
+   "format": "rbxl-xml",
+   "markers": [
+    "BodyColors",
+    "Hint",
+    "Humanoid",
+    "Script",
+    "Value"
+   ],
+   "era_inferred_at_least": 2014,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "1aafb6b87007e4b0": {
+   "file": "Sattalite - clockwork.rbxl",
+   "sha256": "1aafb6b87007e4b0db407f1639b7224beb53d0cd3361a2959c9c4e90c165a301",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 1429788,
+   "format": "rbxl-xml",
+   "markers": [
+    "Script"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "5580cfd5afc0bf39": {
+   "file": "SilentAssassins_Place.rbxl",
+   "sha256": "5580cfd5afc0bf396813007e59b624df66b40898b43eca098cde38233fb3ea4e",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 282859,
+   "format": "rbxl-xml",
+   "markers": [
+    "HopperBin",
+    "Script"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "d9aa860e25d961dc": {
+   "file": "SlideDownTheCityInABox.rbxl",
+   "sha256": "d9aa860e25d961dc77caf6cb1d28f4aafba458b391dab3a2e8170ac171363789",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 12786745,
+   "format": "rbxl-xml",
+   "markers": [
+    "Humanoid",
+    "Script",
+    "Terrain",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "9a4081ca422a2be2": {
+   "file": "Stairway to Heaven.rbxl",
+   "sha256": "9a4081ca422a2be221076286baa037e675bdc488702db4966bb8479f5f4f10b7",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 9658844,
+   "format": "rbxl-xml",
+   "markers": [],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "459cbf004a819316": {
+   "file": "Survive the Spheres Whimee.rbxl",
+   "sha256": "459cbf004a819316ffaf0b795373d58f9b24be894aac2984b06bdb1696f4e3c4",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 16948844,
+   "format": "rbxl-xml",
+   "markers": [
+    "Hint",
+    "Humanoid",
+    "Script",
+    "Terrain",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "2db62c25c8c832ee": {
+   "file": "Sword Fight in the Dark.rbxl",
+   "sha256": "2db62c25c8c832eef5bc9cbde1b9f59ef79d9d4e8262a7da50af196826f5ffea",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 21090,
+   "format": "rbxl-xml",
+   "markers": [
+    "Humanoid",
+    "Script",
+    "Terrain",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "29c05bda4a847143": {
+   "file": "TabulaRasa.rbxl",
+   "sha256": "29c05bda4a847143afcb50960f3824e0192e002bcc6c9b80263347e722d8d02e",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 6251,
+   "format": "rbxl-xml",
+   "markers": [],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "acaa757ef2da0c36": {
+   "file": "The Infection.rbxl",
+   "sha256": "acaa757ef2da0c36e9983f0c63b5d26b07ad78b6c3ad81f474cdb655e77899ea",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 8965808,
+   "format": "rbxl-xml",
+   "markers": [
+    "Humanoid",
+    "Script",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "f5e052b932fb7ada": {
+   "file": "The Killer ROLLER COASTER!! [Un-COPY LOCKED!!!!!!].rbxl",
+   "sha256": "f5e052b932fb7ada745fb3215dd169ec82060fe6ec713488358f99b1bd37f46c",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 826372,
+   "format": "rbxl-xml",
+   "markers": [
+    "Hint",
+    "Script",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "7933b367425cc565": {
+   "file": "The Legente Airship.rbxl",
+   "sha256": "7933b367425cc565741bb21137fb98b8b50f8677d3333b1df20e845abcfbbcbd",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 25577989,
+   "format": "rbxl-xml",
+   "markers": [
+    "Script"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "e18c89a78b311e42": {
+   "file": "The ORIGINAL Polar Bear Attack update.rbxl",
+   "sha256": "e18c89a78b311e42b5e4ade379e375f5591e91c248d70b381a45e3af98513199",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 7736648,
+   "format": "rbxl-xml",
+   "markers": [
+    "Humanoid",
+    "Script"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "41b161c7cb0918ba": {
+   "file": "The Rise of the teapots!!!!!!.rbxl",
+   "sha256": "41b161c7cb0918baf5e15b54ae9b3bb7e149b5a4ccabaddcfba79e3407cac721",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 5076183,
+   "format": "rbxl-xml",
+   "markers": [],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "3ad0720a07388184": {
+   "file": "The-Imperium-of-Man-Training-Academy.rbxl",
+   "sha256": "3ad0720a07388184a68f695ae139cfaeb39d8922efe12350e011b572ae03644d",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 2529249,
+   "format": "rbxl-xml",
+   "markers": [
+    "Terrain"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "d3691b2ae98428a1": {
+   "file": "Timmy and the Killbots.rbxl",
+   "sha256": "d3691b2ae98428a1f529e612d18dd99c00f14fb63df58fc7f8bc7bf632175236",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 24854,
+   "format": "rbxl-xml",
+   "markers": [
+    "HopperBin",
+    "Script",
+    "Terrain",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "b6455116aeafec15": {
+   "file": "Two Player War Tycoon.rbxl",
+   "sha256": "b6455116aeafec15ab27ba2133ab1835935993d1a44ff5d97273afe94b71aa89",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 4903749,
+   "format": "rbxl-xml",
+   "markers": [
+    "Hint",
+    "HopperBin",
+    "Humanoid",
+    "Script",
+    "Terrain",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "db7216017a3486d0": {
+   "file": "Ultimate Build Whimee Grief-proof.rbxl",
+   "sha256": "db7216017a3486d035d9cf9b349d5499ef02e4d91abd35e5e77ecb21b04577b0",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 5555762,
+   "format": "rbxl-xml",
+   "markers": [
+    "Humanoid",
+    "Script"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "27d97dbd01427a51": {
+   "file": "Ultimate Community Construction.rbxl",
+   "sha256": "27d97dbd01427a5102493b6a852c630f5711d4d9bb22d2cd818683aa2c389493",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 7696099,
+   "format": "rbxl-xml",
+   "markers": [
+    "Hint",
+    "HopperBin",
+    "Humanoid",
+    "Script",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "e43c067593a52600": {
+   "file": "Ultimate Paintball Fighting.rbxl",
+   "sha256": "e43c067593a52600fd85875918896351bad8da81d438dbf41fdff9f127bd5af3",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 13512356,
+   "format": "rbxl-xml",
+   "markers": [
+    "Script"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "7b09fc39187d58f4": {
+   "file": "UnderwaterObby.rbxl",
+   "sha256": "7b09fc39187d58f4411d3f2594e001388d32ca622843d1fcd04afc1248e08ae3",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 1540783,
+   "format": "rbxl-xml",
+   "markers": [
+    "Hint",
+    "HopperBin",
+    "Humanoid",
+    "Script",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "0ca3684586b4ba56": {
+   "file": "Vault.rbxl",
+   "sha256": "0ca3684586b4ba5666f320283dbdd5012e32a9b2ef45ef93b17d370e63f24c9d",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 1814712,
+   "format": "rbxl-xml",
+   "markers": [
+    "Hint",
+    "HopperBin",
+    "Humanoid",
+    "Script",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "ec90dc3d6534aaf2": {
+   "file": "VirtualPaintball.rbxl",
+   "sha256": "ec90dc3d6534aaf2a79c8f9ca8ba55c3f82f7c3e8ea1eb62316e0d40e3c93e3c",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 3007748,
+   "format": "rbxl-xml",
+   "markers": [
+    "Hint",
+    "Humanoid",
+    "Script",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "b6a88ae5c7e38021": {
+   "file": "War. Community. Awesomeness. .rbxl",
+   "sha256": "b6a88ae5c7e38021b75b19325938f0c9df85aa7646421edd6ebea7b5d8bba597",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 12014369,
+   "format": "rbxl-xml",
+   "markers": [],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "63620f88485f8e11": {
+   "file": "Weapon FactoryLab (Uptdated ver.1.5).rbxl",
+   "sha256": "63620f88485f8e1131e9d1e32ac3ce621fb9604c649eb3dc62795ee36b20840d",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 1086347,
+   "format": "rbxl-xml",
+   "markers": [
+    "Humanoid",
+    "Script",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "3e024fdca22140ed": {
+   "file": "Wishing Castle.rbxl",
+   "sha256": "3e024fdca22140ed2da5c477d25397ad7e845c70d7229fc599bbb730ffb41e6f",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 99747,
+   "format": "rbxl-xml",
+   "markers": [
+    "HopperBin",
+    "Script",
+    "Terrain",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "b49082766afa867f": {
+   "file": "Zombie Defence II.rbxl",
+   "sha256": "b49082766afa867f4382fd266a65c27fbc0c73f9d5d05e3fdd3df23eff808e84",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 24669116,
+   "format": "rbxl-xml",
+   "markers": [
+    "Hint",
+    "Humanoid",
+    "Script",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "6a2777c478849758": {
+   "file": "Zombie Murder - Random Level Gen.rbxl",
+   "sha256": "6a2777c478849758a128d934a878bfa60a45c234fb7dd950d4bb13b56b4c7bcc",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 1380095,
+   "format": "rbxl-xml",
+   "markers": [
+    "Humanoid",
+    "Script",
+    "Terrain",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "5a3b28312720fa3f": {
+   "file": "c5430b1a15f303fb09a6b94f58012a1a.rbxl",
+   "sha256": "5a3b28312720fa3f63e9be568236b2179c12c02b05df442a6b22234003467131",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 6036108,
+   "format": "rbxl-xml",
+   "markers": [
+    "Humanoid",
+    "Script"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "62cb20e9fac547ba": {
+   "file": "coke island.rbxl",
+   "sha256": "62cb20e9fac547ba54377224262d52c974e1a6473c94bd6fd3efe754818a8a46",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 790794,
+   "format": "rbxl-xml",
+   "markers": [
+    "Humanoid",
+    "Script",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "b87ff2b2117c10ad": {
+   "file": "doomspires.rbxl",
+   "sha256": "b87ff2b2117c10ad0f04205c50259191f532414a64ca9bd03067e2037659b90d",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 9583025,
+   "format": "rbxl-xml",
+   "markers": [
+    "Humanoid",
+    "Script",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "8128b6228b5e6bf1": {
+   "file": "dudedude's Place.rbxl",
+   "sha256": "8128b6228b5e6bf18962b16b1bfc539fc3be10c5b743a6276152b124fb4c1b4a",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 1105203,
+   "format": "rbxl-xml",
+   "markers": [],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "be1c54e81e50e9fa": {
+   "file": "giant rocket arena2.rbxl",
+   "sha256": "be1c54e81e50e9fab61d469756a0eb4671bd7dd86d19640b1e188a3c08400420",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 4288150,
+   "format": "rbxl-xml",
+   "markers": [
+    "FilteringEnabled",
+    "Humanoid",
+    "Script",
+    "StreamingEnabled",
+    "Value"
+   ],
+   "era_inferred_at_least": 2013,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "1592a80485970ecb": {
+   "file": "happy home in robloxia 2009 SNOW.rbxl",
+   "sha256": "1592a80485970ecb06ce68aa126679ccb280d3a9c5a595d6dfae2609611fbad0",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 2922079,
+   "format": "rbxl-xml",
+   "markers": [],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "8b17c1aefa72429b": {
+   "file": "mission to the moon.rbxl",
+   "sha256": "8b17c1aefa72429b301d65dd3034a54ca615a60dc837f39c6adfb45d780c3af5",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 1640553,
+   "format": "rbxl-xml",
+   "markers": [
+    "Script"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "7c11e02f224fba1b": {
+   "file": "paintball_daxter33.rbxl",
+   "sha256": "7c11e02f224fba1bba69d7eab4f61a549a459c9cc59847048ef907ffe399f12c",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 8898880,
+   "format": "rbxl-xml",
+   "markers": [
+    "Humanoid",
+    "Script",
+    "Terrain",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "2bcb619566b7c6b6": {
+   "file": "saints pwners train kamakazis.rbxl",
+   "sha256": "2bcb619566b7c6b6d050e4b7adbc14cdf187cc5ce12e58b1558160df663bb1db",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 22697859,
+   "format": "rbxl-xml",
+   "markers": [
+    "Script",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "57a73eabb12d9476": {
+   "file": "\u2584\u2580\u2584\u2580\u2584 Down Hill Extreme\u2584\u2580\u2584\u2580\u2584.rbxl",
+   "sha256": "57a73eabb12d947634c0ac9737c859b1060c15ec2f9ea64ffec587b0a9bee387",
+   "source_dir": "/tmp/places-archive/Games",
+   "source_repo": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+   "bytes": 6840222,
+   "format": "rbxl-xml",
+   "markers": [
+    "Hint",
+    "Script",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "candidate",
+   "imported_as": null
+  },
+  "60250ef1b6faf2b8": {
+   "file": "After The Flash- Standstorm (December 2015).rbxl",
+   "sha256": "60250ef1b6faf2b8217d212d10eea8b96861a673ea868df88fcb586b7a61a67d",
+   "source_dir": "/tmp/luaguns-2015",
+   "source_repo": "LuaGunsX/RobloxRBXLArchive (github.com/LuaGunsX/RobloxRBXLArchive)",
+   "bytes": 858218,
+   "format": "rbxl-xml",
+   "markers": [
+    "Humanoid",
+    "Script",
+    "Terrain",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "imported",
+   "imported_as": {
+    "game_id": 15,
+    "name": "After The Flash- Standstorm (December 2015)",
+    "sha256": "60250ef1b6faf2b8217d212d10eea8b96861a673ea868df88fcb586b7a61a67d"
+   },
+   "era_evidence": {
+    "markers": [
+     "CustomPhysicalProperties",
+     "Terrain"
+    ],
+    "post_2013_markers": [],
+    "class_count": 81,
+    "property_sample": 138
+   }
+  },
+  "6176c0231304f0bf": {
+   "file": "F3X Building Game (2015M).rbxl",
+   "sha256": "6176c0231304f0bf34b6def393371ef960cf1f3b8534500a16ed8ee9f81c1637",
+   "source_dir": "/tmp/luaguns-2015",
+   "source_repo": "LuaGunsX/RobloxRBXLArchive (github.com/LuaGunsX/RobloxRBXLArchive)",
+   "bytes": 179567,
+   "format": "rbxl-xml",
+   "markers": [
+    "FilteringEnabled",
+    "Script",
+    "StreamingEnabled",
+    "Terrain",
+    "Value"
+   ],
+   "era_inferred_at_least": 2013,
+   "status": "imported",
+   "imported_as": {
+    "game_id": 16,
+    "name": "F3X Building Game (2015M)",
+    "sha256": "6176c0231304f0bf34b6def393371ef960cf1f3b8534500a16ed8ee9f81c1637"
+   },
+   "era_evidence": {
+    "markers": [
+     "FilteringEnabled",
+     "StreamingEnabled",
+     "Terrain"
+    ],
+    "post_2013_markers": [
+     "FilteringEnabled",
+     "StreamingEnabled"
+    ],
+    "class_count": 62,
+    "property_sample": 165
+   }
+  },
+  "801c29de128acdf7": {
+   "file": "Island III (2015L).rbxl",
+   "sha256": "801c29de128acdf79987ce6b9eaf9efeac38743e36642830c0d0922c97af8257",
+   "source_dir": "/tmp/luaguns-2015",
+   "source_repo": "LuaGunsX/RobloxRBXLArchive (github.com/LuaGunsX/RobloxRBXLArchive)",
+   "bytes": 375783,
+   "format": "rbxl-xml",
+   "markers": [
+    "Animator",
+    "FilteringEnabled",
+    "Humanoid",
+    "MeshPart",
+    "R15",
+    "Script",
+    "StreamingEnabled",
+    "Terrain",
+    "UnionOperation",
+    "Value"
+   ],
+   "era_inferred_at_least": 2016,
+   "status": "imported",
+   "imported_as": {
+    "game_id": 17,
+    "name": "Island III (2015L)",
+    "sha256": "801c29de128acdf79987ce6b9eaf9efeac38743e36642830c0d0922c97af8257"
+   },
+   "era_evidence": {
+    "markers": [
+     "CustomPhysicalProperties",
+     "StreamingEnabled",
+     "Terrain",
+     "UnionOperation"
+    ],
+    "post_2013_markers": [
+     "StreamingEnabled"
+    ],
+    "class_count": 87,
+    "property_sample": 467
+   }
+  },
+  "cc52ff985d57552e": {
+   "file": "The Plaza Karts (September 27th, 2015).rbxl",
+   "sha256": "cc52ff985d57552e80d8443c01527f0eee1aba89ae9d51316c1ed2239c643edb",
+   "source_dir": "/tmp/luaguns-2015",
+   "source_repo": "LuaGunsX/RobloxRBXLArchive (github.com/LuaGunsX/RobloxRBXLArchive)",
+   "bytes": 4552426,
+   "format": "rbxl-xml",
+   "markers": [
+    "Humanoid",
+    "Script",
+    "Terrain",
+    "UnionOperation",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "imported",
+   "imported_as": {
+    "game_id": 18,
+    "name": "The Plaza Karts (September 27th, 2015)",
+    "sha256": "cc52ff985d57552e80d8443c01527f0eee1aba89ae9d51316c1ed2239c643edb"
+   },
+   "era_evidence": {
+    "markers": [
+     "FilteringEnabled",
+     "ParticleEmitter",
+     "StreamingEnabled",
+     "Terrain",
+     "UnionOperation"
+    ],
+    "post_2013_markers": [
+     "FilteringEnabled",
+     "StreamingEnabled"
+    ],
+    "class_count": 73,
+    "property_sample": 211
+   }
+  },
+  "4b8b6b2f68777b8b": {
+   "file": "Vampire Hunters 2 (Beta 1.2, June 14th, 2015).rbxl",
+   "sha256": "4b8b6b2f68777b8b9cad7c0497e522a305a57453616f203a825f90b835cd3d86",
+   "source_dir": "/tmp/luaguns-2015",
+   "source_repo": "LuaGunsX/RobloxRBXLArchive (github.com/LuaGunsX/RobloxRBXLArchive)",
+   "bytes": 951006,
+   "format": "rbxl-xml",
+   "markers": [
+    "Humanoid",
+    "Script",
+    "Terrain",
+    "UnionOperation",
+    "Value"
+   ],
+   "era_inferred_at_least": 2006,
+   "status": "imported",
+   "imported_as": {
+    "game_id": 19,
+    "name": "Vampire Hunters 2 (Beta 1.2, June 14th, 2015)",
+    "sha256": "4b8b6b2f68777b8b9cad7c0497e522a305a57453616f203a825f90b835cd3d86"
+   },
+   "era_evidence": {
+    "markers": [
+     "ParticleEmitter",
+     "Terrain",
+     "UnionOperation"
+    ],
+    "post_2013_markers": [],
+    "class_count": 95,
+    "property_sample": 140
+   }
+  },
+  "aa3c2f0b60518fdc": {
+   "file": "Flood Escape (January 19th, 2015, V1.6.2).rbxl",
+   "sha256": "aa3c2f0b60518fdc4b8d464ab9adf68d7c2284cdcc62930e9ccab31925f44a60",
+   "source_dir": "/tmp/luaguns-2015",
+   "source_repo": "LuaGunsX/RobloxRBXLArchive (github.com/LuaGunsX/RobloxRBXLArchive)",
+   "bytes": 342311,
+   "format": "rbxl-xml",
+   "markers": [
+    "Animator",
+    "FilteringEnabled",
+    "HopperBin",
+    "Humanoid",
+    "Script",
+    "StreamingEnabled",
+    "Terrain",
+    "UnionOperation",
+    "Value"
+   ],
+   "era_inferred_at_least": 2016,
+   "status": "imported",
+   "imported_as": {
+    "game_id": 20,
+    "name": "Flood Escape (January 19th, 2015, V1.6.2)",
+    "sha256": "aa3c2f0b60518fdc4b8d464ab9adf68d7c2284cdcc62930e9ccab31925f44a60"
+   },
+   "era_evidence": {
+    "markers": [
+     "FilteringEnabled",
+     "StreamingEnabled",
+     "Terrain",
+     "UnionOperation"
+    ],
+    "post_2013_markers": [
+     "FilteringEnabled",
+     "StreamingEnabled"
+    ],
+    "class_count": 95,
+    "property_sample": 226
+   }
+  },
+  "c247b43836ab033d": {
+   "file": "Flood Escape (July 8th, 2015, V1.6.5).rbxl",
+   "sha256": "c247b43836ab033db53b85551e193aefcac81937d1881857f08eb6d6fd58df59",
+   "source_dir": "/tmp/luaguns-2015",
+   "source_repo": "LuaGunsX/RobloxRBXLArchive (github.com/LuaGunsX/RobloxRBXLArchive)",
+   "bytes": 395038,
+   "format": "rbxl-xml",
+   "markers": [
+    "Animator",
+    "FilteringEnabled",
+    "Hint",
+    "HopperBin",
+    "Humanoid",
+    "Script",
+    "StreamingEnabled",
+    "Terrain",
+    "UnionOperation",
+    "Value"
+   ],
+   "era_inferred_at_least": 2016,
+   "status": "imported",
+   "imported_as": {
+    "game_id": 6,
+    "name": "Flood Escape (July 8th, 2015, V1.6.5)",
+    "sha256": "c247b43836ab033db53b85551e193aefcac81937d1881857f08eb6d6fd58df59"
+   },
+   "era_evidence": {
+    "markers": [
+     "FilteringEnabled",
+     "StreamingEnabled",
+     "Terrain",
+     "UnionOperation"
+    ],
+    "post_2013_markers": [
+     "FilteringEnabled",
+     "StreamingEnabled"
+    ],
+    "class_count": 103,
+    "property_sample": 239
+   }
+  },
+  "8b514a0a166da787": {
+   "file": "Mad Games (v1.3b, 2015).rbxl",
+   "sha256": "8b514a0a166da7873720b9a90024ae953c10b427d1cbc379cc38e102be7059a2",
+   "source_dir": "/tmp/luaguns-2015",
+   "source_repo": "LuaGunsX/RobloxRBXLArchive (github.com/LuaGunsX/RobloxRBXLArchive)",
+   "bytes": 1050307,
+   "format": "rbxl-xml",
+   "markers": [
+    "BodyColors",
+    "HopperBin",
+    "Humanoid",
+    "Script",
+    "Terrain",
+    "UnionOperation",
+    "Value"
+   ],
+   "era_inferred_at_least": 2014,
+   "status": "imported",
+   "imported_as": {
+    "game_id": 5,
+    "name": "Mad Games (v1.3b, 2015)",
+    "sha256": "8b514a0a166da7873720b9a90024ae953c10b427d1cbc379cc38e102be7059a2"
+   },
+   "era_evidence": {
+    "markers": [
+     "BodyColors",
+     "ParticleEmitter",
+     "Terrain",
+     "UnionOperation"
+    ],
+    "post_2013_markers": [
+     "BodyColors"
+    ],
+    "class_count": 84,
+    "property_sample": 128
+   }
+  },
+  "e2eab5df527ce788": {
+   "file": "The Normal Elevator - Fixed for 2015M.rbxl",
+   "sha256": "e2eab5df527ce7889c67b5c7a668fd870738bcdbdf8fd5c5dfb85fc2460246d0",
+   "source_dir": "/tmp/luaguns-2015",
+   "source_repo": "LuaGunsX/RobloxRBXLArchive (github.com/LuaGunsX/RobloxRBXLArchive)",
+   "bytes": 4085164,
+   "format": "rbxl-xml",
+   "markers": [
+    "Animator",
+    "BodyColors",
+    "Humanoid",
+    "Script",
+    "Terrain",
+    "UnionOperation",
+    "Value"
+   ],
+   "era_inferred_at_least": 2016,
+   "status": "imported",
+   "imported_as": {
+    "game_id": 4,
+    "name": "The Normal Elevator - Fixed for 2015M",
+    "sha256": "e2eab5df527ce7889c67b5c7a668fd870738bcdbdf8fd5c5dfb85fc2460246d0"
+   },
+   "era_evidence": {
+    "markers": [
+     "Animator",
+     "BodyColors",
+     "FilteringEnabled",
+     "StreamingEnabled",
+     "Terrain",
+     "UnionOperation"
+    ],
+    "post_2013_markers": [
+     "FilteringEnabled",
+     "StreamingEnabled",
+     "BodyColors"
+    ],
+    "class_count": 105,
+    "property_sample": 245
+   }
+  }
+ }
+}

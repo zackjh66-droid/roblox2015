@@ -1,0 +1,22 @@
+{
+ "File": "F3X Building Game (2015M).rbxl",
+ "Source": "LuaGunsX/RobloxRBXLArchive (github.com/LuaGunsX/RobloxRBXLArchive)",
+ "SHA256": "6176c0231304f0bf34b6def393371ef960cf1f3b8534500a16ed8ee9f81c1637",
+ "Creator": "unverified",
+ "FilenameDateClaim": "none",
+ "ArchiveAttributedCreator": "unverified",
+ "EraEvidence": {
+  "markers": [
+   "FilteringEnabled",
+   "StreamingEnabled",
+   "Terrain"
+  ],
+  "post_2013_markers": [
+   "FilteringEnabled",
+   "StreamingEnabled"
+  ],
+  "class_count": 62,
+  "basis": "full parsed class/property usage, not a claimed save date"
+ },
+ "ImportNote": "Imported by tools/import_places.py; scripts inventoried, never executed."
+}

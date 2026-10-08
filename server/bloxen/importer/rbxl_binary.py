@@ -45,9 +45,36 @@ TYPE_INT64 = 0x1B
 TYPE_SHAREDSTRING = 0x1C
 TYPE_BYTECODE = 0x1D
 
-CFRAME_ROT_MATRIX = [  # 12 stored rotation matrices per axis id (Roblox legacy quirk)
-    (1, 0, 0, 0, 1, 0, 0, 0, 1),
-]
+# Orientation id -> 3x3 rotation matrix, from the public binary-format codec
+# (research/sources/formats/rbx-binary-format/codec_cframe.lua, `orientIdToMatrix`).
+# Id 0x00 means "full matrix follows inline"; ids below are the compact 24-way table.
+IDENTITY_MATRIX = (1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0)
+ORIENT_ID_TO_MATRIX = {
+    0x02: (1, 0, 0, 0, 1, 0, 0, 0, 1),
+    0x03: (1, 0, 0, 0, 0, -1, 0, 1, 0),
+    0x05: (1, 0, 0, 0, -1, 0, 0, 0, -1),
+    0x06: (1, 0, -0.0, 0, 0, 1, 0, -1, 0),
+    0x07: (0, 1, 0, 1, 0, 0, 0, 0, -1),
+    0x09: (0, 0, 1, 1, 0, 0, 0, 1, 0),
+    0x0A: (0, -1, 0, 1, 0, -0.0, 0, 0, 1),
+    0x0C: (0, 0, -1, 1, 0, 0, 0, -1, 0),
+    0x0D: (0, 1, 0, 0, 0, 1, 1, 0, 0),
+    0x0E: (0, 0, -1, 0, 1, 0, 1, 0, 0),
+    0x10: (0, -1, 0, 0, 0, -1, 1, 0, 0),
+    0x11: (0, 0, 1, 0, -1, 0, 1, 0, -0.0),
+    0x14: (-1, 0, 0, 0, 1, 0, 0, 0, -1),
+    0x15: (-1, 0, 0, 0, 0, 1, 0, 1, -0.0),
+    0x17: (-1, 0, 0, 0, -1, 0, 0, 0, 1),
+    0x18: (-1, 0, -0.0, 0, 0, -1, 0, -1, -0.0),
+    0x19: (0, 1, -0.0, -1, 0, 0, 0, 0, 1),
+    0x1B: (0, 0, -1, -1, 0, 0, 0, 1, 0),
+    0x1C: (0, -1, -0.0, -1, 0, -0.0, 0, 0, -1),
+    0x1E: (0, 0, 1, -1, 0, 0, 0, -1, 0),
+    0x1F: (0, 1, 0, 0, 0, -1, -1, 0, 0),
+    0x20: (0, 0, 1, 0, 1, -0.0, -1, 0, 0),
+    0x22: (0, -1, 0, 0, 0, 1, -1, 0, 0),
+    0x23: (0, 0, -1, 0, -1, -0.0, -1, 0, -0.0),
+}
 
 SCRIPT_CLASSES = {"Script", "LocalScript", "ModuleScript"}
 
@@ -95,7 +122,9 @@ def _parse_property_values(r: Reader, type_id: int, count: int, shared: list[byt
     if t == TYPE_FLOAT64:
         return [r.f64() for _ in range(count)]
     if t == TYPE_UDIM:
-        return [(r.interleaved_i32(count), r.interleaved_i32(count))]  # scale, offset arrays
+        scale = r.interleaved_i32(count)
+        offset = r.interleaved_i32(count)
+        return [(scale[i], offset[i]) for i in range(count)]
     if t == TYPE_UDIM2:
         sx = r.interleaved_i32(count)
         ox = r.interleaved_i32(count)
@@ -110,7 +139,10 @@ def _parse_property_values(r: Reader, type_id: int, count: int, shared: list[byt
     if t == TYPE_BRICKCOLOR:
         return r.interleaved_uint(count, 4)
     if t == TYPE_COLOR3:
-        return [r.interleaved_rbx_float32(count) for _ in range(3)]  # r,g,b arrays
+        rs = r.interleaved_rbx_float32(count)
+        gs = r.interleaved_rbx_float32(count)
+        bs = r.interleaved_rbx_float32(count)
+        return [(rs[i], gs[i], bs[i]) for i in range(count)]
     if t == TYPE_VECTOR2:
         xs = r.interleaved_rbx_float32(count)
         ys = r.interleaved_rbx_float32(count)
@@ -125,16 +157,23 @@ def _parse_property_values(r: Reader, type_id: int, count: int, shared: list[byt
         raw = [r.read(size) for _ in range(count)]
         return raw
     if t == TYPE_CFRAME:
-        out = []
-        pos = []
-        for _ in range(3):
-            pos.append(r.interleaved_rbx_float32(count))
-        for i in range(count):
+        # Genuine layout (codec_cframe.lua::reader): per instance an orientation id byte
+        # first (id 0x00 => 9 inline float32s follow), THEN three interleaved position
+        # arrays. Reference codecs read it in exactly this order.
+        rotations = []
+        for _ in range(count):
             rot_id = r.u8()
-            rot = (0.0,) * 9 if rot_id > 11 else CFRAME_ROT_MATRIX[0]
-            # rotation matrix id semantics: store id + placeholder matrix
-            out.append({"rot_id": rot_id, "pos": (pos[0][i], pos[1][i], pos[2][i])})
-        return out
+            if rot_id == 0x00:
+                rotations.append(tuple(r.f32() for _ in range(9)))
+            else:
+                mat = ORIENT_ID_TO_MATRIX.get(rot_id)
+                if mat is None:
+                    raise ParseError(f"invalid CFrame orientation id {rot_id:#04x}")
+                rotations.append(tuple(float(v) for v in mat))
+        xs = r.interleaved_rbx_float32(count)
+        ys = r.interleaved_rbx_float32(count)
+        zs = r.interleaved_rbx_float32(count)
+        return [{"pos": (xs[i], ys[i], zs[i]), "rot": rotations[i]} for i in range(count)]
     if t == TYPE_QUATERNION:
         return [r.f32() * 4 for _ in range(count)]
     if t == TYPE_ENUM or t == TYPE_INT64:

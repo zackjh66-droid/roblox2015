@@ -2,9 +2,10 @@
 
 ```
 run_all.py
-├── web   (FastAPI + Jinja2 + aiosqlite)      :8080   website, auth, play tickets
+├── web   (FastAPI + Jinja2 + aiosqlite)      :8080   website, auth, play tickets, client runtime
 ├── compat (FastAPI)                          :8081   2015-client HTTP surface (localhost only)
 ├── assets (FastAPI)                          :8082   asset recovery index (localhost only)
+│        └── /play/<id> + /static/js/bloxen-client.js (three.js WebGL client runtime)
 └── gameserver (asyncio UDP RakNet + replicator) :53640  game server
 ```
 
@@ -22,11 +23,15 @@ run_all.py
 | `server/bloxen/assetsvc/` | asset recovery service |
 | `server/bloxen/gameserver/` | bitstream, raknet, descriptors (API-dump based), replicator (SET_GLOBALS/ID_DATA), GameServer |
 | `server/bloxen/launcher/` | bloxen-player URI parser + ticket validation + client hash allowlist (never executes) |
+| `server/bloxen/placeview/geometry.py` | parsed place -> render-ready geometry payload (parts, colours, surfaces, spawns, lighting, honesty report), cached per place SHA-256 in `data/place_geometry/` |
 | `server/bloxen/simulator/` | SIMULATOR-TESTED full-stack client harness (`python -m bloxen.simulator.client -v`) |
 | `tools/seed.py` | evidence-backed seeder (games, catalog items, research DB) |
 | `tools/import_capture.py` | quarantine-style research capture intake |
 | `tests/` | unit + full-stack end-to-end tests (live services over real ports) |
 | `tests/test_importer_fixtures.py` | parser regression fixtures against quarantined places |
+| `tests/test_place_geometry.py` | bitstream/CFrame/XML codec regressions + geometry-export invariants |
+| `tools/import_places.py` | archive intake: discover → catalogue → quarantine → parse → DB (real files only) |
+| `tools/browser/` | CDP driver, client-runtime probe and all-games validator (headless Chromium) |
 
 ## Data
 

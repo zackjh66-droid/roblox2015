@@ -1,0 +1,97 @@
+/* BLOXEN client runtime chrome.
+   The 3D viewport is rendered by /static/js/bloxen-client.js (three.js).
+   HUD/panel styling is a reconstruction of the 2015 in-experience UI: the
+   original client's bitmap UI assets are part of the (unavailable) client
+   package, so shapes/colours here are evidence-based approximations.        */
+
+html, body.blx-playing { margin: 0; padding: 0; overflow: hidden; background: #000; }
+/* the 3D viewport owns the whole window while playing */
+body.blx-playing #bloxen-disclosure,
+body.blx-playing #header,
+body.blx-playing #footer { display: none !important; }
+body.blx-playing #navContent,
+body.blx-playing #navContent .nav-content-inner,
+body.blx-playing #MasterContainer,
+body.blx-playing #BodyWrapper { margin: 0 !important; padding: 0 !important; width: 100% !important;
+    max-width: none !important; background: transparent !important; }
+
+.blx-runtime { position: fixed; inset: 0; background: #000; overflow: hidden;
+    font-family: 'Source Sans Pro', Arial, sans-serif; user-select: none; }
+.blx-runtime #blx-canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+
+/* ---------- loading ---------- */
+#blx-loading { position: absolute; inset: 0; background: #151515; display: flex;
+    align-items: center; justify-content: center; z-index: 60; }
+.blx-loading-inner { width: 460px; text-align: center; color: #eee; }
+.blx-logo { font-size: 30px; letter-spacing: 3px; font-weight: 700; color: #fff; }
+.blx-loading-game { margin-top: 6px; font-size: 17px; color: #cfe8ff; }
+.blx-loading-status { margin-top: 18px; font-size: 13px; color: #aaa; min-height: 18px; }
+.blx-bar { margin-top: 10px; height: 8px; background: #2b2b2b; border: 1px solid #3c3c3c; border-radius: 4px; overflow: hidden; }
+.blx-bar-fill { height: 100%; width: 0%; background: linear-gradient(90deg, #2e7d32, #66bb6a); transition: width .25s; }
+.blx-loading-note { margin-top: 14px; font-size: 11px; color: #777; line-height: 1.5; }
+
+/* ---------- top bar ---------- */
+.blx-topbar { position: absolute; top: 0; left: 0; right: 0; height: 30px; z-index: 40;
+    display: flex; justify-content: space-between; align-items: center;
+    background: linear-gradient(#3a3a3a, #232323); border-bottom: 1px solid #111;
+    color: #eee; font-size: 12px; padding: 0 6px; box-shadow: 0 1px 3px rgba(0,0,0,.6); }
+.blx-topbar-left, .blx-topbar-right { display: flex; align-items: center; gap: 8px; }
+.blx-topbar-brand { font-weight: 700; letter-spacing: 1.5px; color: #fff; }
+.blx-topbar-place { color: #b8d8ff; max-width: 320px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.blx-btn { background: linear-gradient(#4a4a4a, #333); color: #eee; border: 1px solid #111;
+    border-radius: 3px; font-size: 12px; padding: 3px 9px; cursor: pointer; font-family: inherit; }
+.blx-btn:hover { background: linear-gradient(#565656, #3c3c3c); }
+.blx-btn-menu { font-size: 13px; padding: 2px 9px; }
+.blx-hud-stat { color: #9fd39f; font-family: monospace; font-size: 11px; }
+
+/* ---------- chat ---------- */
+.blx-chat { position: absolute; left: 8px; bottom: 8px; width: 320px; z-index: 35;
+    background: rgba(10,10,10,.72); border: 1px solid rgba(255,255,255,.15); border-radius: 4px;
+    padding: 6px; display: none; }
+.blx-chat.open { display: block; }
+.blx-chat-log { max-height: 150px; overflow-y: auto; font-size: 12px; color: #eee; line-height: 1.5; }
+.blx-chat-log .blx-chat-sys { color: #8fb8d8; }
+.blx-chat-input-row { margin-top: 5px; }
+.blx-chat-input-row input { width: 100%; box-sizing: border-box; background: #000;
+    border: 1px solid #555; color: #fff; font-size: 12px; padding: 4px 6px; border-radius: 3px;
+    font-family: inherit; }
+
+/* ---------- players ---------- */
+.blx-playerlist { position: absolute; right: 8px; top: 38px; width: 170px; z-index: 35;
+    background: rgba(10,10,10,.72); border: 1px solid rgba(255,255,255,.15); border-radius: 4px;
+    color: #eee; font-size: 12px; padding: 6px 8px; }
+.blx-panel-title { font-weight: 600; font-size: 12px; color: #fff; display: flex;
+    justify-content: space-between; align-items: center; margin-bottom: 4px; }
+.blx-player-row { display: flex; align-items: center; gap: 6px; }
+.blx-dot { width: 8px; height: 8px; border-radius: 50%; background: #6f6; display: inline-block; }
+.blx-player-hint { color: #999; font-size: 10px; margin-top: 4px; }
+
+/* ---------- menu ---------- */
+.blx-menu { position: absolute; left: 0; top: 30px; bottom: 0; width: 372px; z-index: 45;
+    background: rgba(20,20,20,.95); border-right: 1px solid #000; color: #ddd;
+    font-size: 12px; transform: translateX(-100%); transition: transform .18s; overflow-y: auto; }
+.blx-menu.open { transform: translateX(0); }
+.blx-menu .blx-panel-title { padding: 8px 10px; background: linear-gradient(#3a3a3a, #262626);
+    border-bottom: 1px solid #000; margin: 0; font-size: 13px; }
+.blx-menu-body { padding: 10px 12px 24px; }
+.blx-section-title { margin: 14px 0 6px; font-weight: 600; color: #9fd39f; font-size: 12px;
+    border-bottom: 1px solid #333; padding-bottom: 3px; }
+.blx-kv { width: 100%; border-collapse: collapse; }
+.blx-kv td { padding: 2px 0; vertical-align: top; font-size: 11px; }
+.blx-kv td:first-child { color: #888; width: 44%; }
+.blx-kv td:last-child { word-break: break-word; font-family: monospace; font-size: 10.5px; }
+.blx-controls { display: flex; flex-direction: column; gap: 3px; font-size: 11px; color: #bbb; }
+.blx-opt { display: block; margin: 5px 0; color: #ccc; font-size: 11.5px; }
+.blx-opt select { margin-left: 6px; background: #2a2a2a; color: #eee; border: 1px solid #444;
+    border-radius: 3px; font-family: inherit; font-size: 11px; }
+.blx-back { margin-top: 18px; }
+.blx-back a { color: #7fb3ff; }
+.blx-warn { color: #e0b060; }
+.blx-missing-list { max-height: 130px; overflow-y: auto; font-family: monospace; font-size: 10px; color: #999; }
+.blx-badge { display: inline-block; padding: 1px 5px; border-radius: 3px; font-size: 10px;
+    background: #2e7d32; color: #fff; margin-right: 4px; }
+.blx-badge.warn { background: #a05a00; }
+.blx-toast { position: absolute; left: 50%; bottom: 56px; transform: translateX(-50%);
+    background: rgba(0,0,0,.75); color: #eee; border: 1px solid #444; border-radius: 4px;
+    padding: 6px 12px; font-size: 12px; z-index: 50; opacity: 0; transition: opacity .3s; }
+.blx-toast.show { opacity: 1; }

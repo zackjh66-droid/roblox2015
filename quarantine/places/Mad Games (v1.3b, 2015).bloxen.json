@@ -1,0 +1,22 @@
+{
+ "File": "Mad Games (v1.3b, 2015).rbxl",
+ "Source": "LuaGunsX/RobloxRBXLArchive (github.com/LuaGunsX/RobloxRBXLArchive)",
+ "SHA256": "8b514a0a166da7873720b9a90024ae953c10b427d1cbc379cc38e102be7059a2",
+ "Creator": "unverified",
+ "FilenameDateClaim": "2015",
+ "ArchiveAttributedCreator": "loleris",
+ "EraEvidence": {
+  "markers": [
+   "BodyColors",
+   "ParticleEmitter",
+   "Terrain",
+   "UnionOperation"
+  ],
+  "post_2013_markers": [
+   "BodyColors"
+  ],
+  "class_count": 84,
+  "basis": "full parsed class/property usage, not a claimed save date"
+ },
+ "ImportNote": "Imported by tools/import_places.py; scripts inventoried, never executed."
+}

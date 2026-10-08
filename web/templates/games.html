@@ -16,6 +16,12 @@
                 <a class="title" href="/games/{{ g.id }}/{{ g.slug }}">{{ g.name }}</a>
                 <div class="meta">by {{ g.creator }}</div>
                 <div class="meta">{{ g.compatibility_status }}</div>
+                {% if g.place_path %}
+                <a class="bloxen-play" href="/play/{{ g.id }}">▶ Play in browser</a>
+                <div class="meta bloxen-play-note">real preserved place file</div>
+                {% else %}
+                <div class="meta bloxen-play-note">no place file — not playable</div>
+                {% endif %}
             </div>
             {% endfor %}
             <div class="bloxen-clear"></div>

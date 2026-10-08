@@ -4,11 +4,18 @@ __pycache__/
 *.pyc
 .pytest_cache/
 
-# downloaded browser runtime (restored by tools/browser/run-chromium.sh)
-tools/browser/*
-!tools/browser/cdp.py
-!tools/browser/run-chromium.sh
-!tools/browser/README.md
+# downloaded browser runtime: ~280 MB of binaries, restored by fetch-chromium.sh
+# (only the *scripts* are tracked — losing the binaries costs one download, losing the
+# tools cost real work, so the tools must never be ignored)
+tools/browser/chromium
+tools/browser/chromium.tgz
+tools/browser/swiftshader/
+tools/browser/fonts/
+tools/browser/libs/
+tools/browser/vk_swiftshader_icd.json
+tools/browser/al2023.tar
+tools/browser/fonts.tar
+tools/browser/swiftshader.tar
 
 # runtime state (regenerable)
 data/*.sqlite3
@@ -17,3 +24,9 @@ data/world_cache.json
 data/asset-recovery/
 web/static/refcss/
 web/static/ref-trade-2015.html
+
+# regenerable per-place geometry caches (rebuilt from the place files on demand)
+data/place_geometry/
+
+# direct-browser screenshots/scratch
+/tmp/

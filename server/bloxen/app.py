@@ -12,7 +12,9 @@ import sqlite3
 from pathlib import Path
 
 from fastapi import FastAPI, Form, Request
-from fastapi.responses import HTMLResponse, JSONResponse, RedirectResponse
+from fastapi.middleware.gzip import GZipMiddleware
+from fastapi import Response
+from fastapi.responses import FileResponse, HTMLResponse, JSONResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
@@ -70,8 +72,22 @@ def game_row(con, game_id) -> dict | None:
     return d
 
 
+def load_place_report(game: dict):
+    """Parse a game's preserved place file (cached geometry is built from this)."""
+    from .importer.pipeline import import_place
+    p = game.get("place_path")
+    if not p:
+        return None
+    path = Path(p)
+    if not path.exists():
+        return None
+    return import_place(path)
+
+
 def build_app() -> FastAPI:
     app = FastAPI(title="BLOXEN", docs_url=None, redoc_url=None, openapi_url=None)
+    # Place geometry payloads are megabytes of JSON; compress for the browser.
+    app.add_middleware(GZipMiddleware, minimum_size=1024)
     app.mount("/static", StaticFiles(directory=str(config.WEB / "static")), name="static")
     templates.env.auto_reload = True
 
@@ -715,6 +731,103 @@ def build_app() -> FastAPI:
         con.close()
         return {"ok": True, "user": dict(user), "game": game,
                 "server_id": row["server_id"]}
+
+    # ------------------------------------------------- client runtime (play)
+    def _geometry_for(game_id: int):
+        con = get_db()
+        g = game_row(con, game_id)
+        con.close()
+        if not g:
+            return None, None
+        from .placeview.geometry import load_or_build_geometry
+        report = load_place_report(g)
+        if report is None:
+            return g, None
+        return g, load_or_build_geometry(report, game_id=game_id, db_path=config.DB_PATH)
+
+    @app.post("/play/start")
+    def play_start(request: Request, game_id: int = Form(...)):
+        return RedirectResponse(f"/play/{game_id}", status_code=302)
+
+    @app.get("/play/{game_id}", response_class=HTMLResponse)
+    def play_page(request: Request, game_id: int):
+        con = get_db()
+        user = current_user(request, con)
+        g = game_row(con, game_id)
+        con.close()
+        if not g:
+            return RedirectResponse("/games", status_code=302)
+        return templates.TemplateResponse(request, "play.html",
+                                          {"request": request, "user": user, "game": g})
+
+    @app.get("/api/place/{game_id}/geometry")
+    def api_place_geometry(game_id: int):
+        g, geo = _geometry_for(game_id)
+        if g is None:
+            return JSONResponse({"error": "unknown game"}, status_code=404)
+        if geo is None:
+            return JSONResponse({"error": "place file unavailable",
+                                 "game": g["name"], "place_path": g.get("place_path")},
+                                status_code=409)
+        return JSONResponse(geo)
+
+    @app.get("/api/place/{game_id}/scripts")
+    def api_place_scripts(game_id: int, limit: int = 400):
+        """Inert script inventory for the runtime panel (never executed)."""
+        con = get_db()
+        g = game_row(con, game_id)
+        con.close()
+        if not g:
+            return JSONResponse({"error": "unknown game"}, status_code=404)
+        report = load_place_report(g)
+        if report is None:
+            return JSONResponse({"error": "place file unavailable"}, status_code=409)
+        scripts = report["meta"]["script_inventory"][:limit]
+        kinds: dict[str, int] = {}
+        for s in report["meta"]["script_inventory"]:
+            kinds[s["class"]] = kinds.get(s["class"], 0) + 1
+        return {"game_id": game_id, "total": len(report["meta"]["script_inventory"]),
+                "by_class": kinds, "scripts": scripts,
+                "execution": "NOT EXECUTED — inventoried as inert data (docs/GAMES.md)"}
+
+    # Images referenced by the *preserved* 2015 CSS bundles (logo marks, nav icon
+    # sprite, buttons, badges…) were served from /images/ on the original site.
+    # Almost none of them survive in any legitimate archive. Rather than fabricate
+    # artwork or leave the page visibly broken, they resolve to a transparent
+    # placeholder and are explicitly labelled MISSING in the response headers, so
+    # nothing is disguised as a recovered asset. The trademarked mark itself is
+    # deliberately never reproduced (see web/static/css/bloxen.css §2).
+    TRANSPARENT_SVG = (b'<svg xmlns="http://www.w3.org/2000/svg" width="1" height="1">'
+                       b'</svg>')
+
+    @app.get("/images/{path:path}")
+    def missing_historical_image(path: str):
+        return Response(
+            content=TRANSPARENT_SVG,
+            media_type="image/svg+xml",
+            headers={
+                "X-Bloxen-Asset-Status": "MISSING",
+                "X-Bloxen-Asset-Path": f"/images/{path}",
+                "Cache-Control": "public, max-age=300",
+            },
+        )
+
+    @app.get("/asset/{asset_id}")
+    def serve_asset(asset_id: int):
+        """Local delivery of recovered historical assets (browser-facing proxy of
+        the private asset service). MISSING assets are never substituted."""
+        con = get_db()
+        row = con.execute("SELECT * FROM assets WHERE historical_asset_id = ?",
+                          (asset_id,)).fetchone()
+        con.close()
+        if not row or row["status"] != "RECOVERED" or not row["local_path"]:
+            return JSONResponse({"id": asset_id, "status": "MISSING",
+                                 "note": "asset not recovered; nothing is fabricated"}, status_code=404)
+        p = Path(config.ROOT / row["local_path"])
+        if not p.exists():
+            return JSONResponse({"id": asset_id, "status": "MISSING",
+                                 "note": "recovered file absent from this checkout"}, status_code=404)
+        return FileResponse(p)
 
     return app
 

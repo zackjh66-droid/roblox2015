@@ -82,3 +82,104 @@ SHA-256'd) to classify required runtime features. Output:
 sandboxed 2015-Lua runtime → feature-gated activation per pillar → SIMULATOR-TESTED →
 (real client) REAL-CLIENT-TESTED. Person299's Admin Commands (NDS) and any admin/HTTP
 scripts remain quarantined inert data regardless.
+
+---
+
+# Game library expansion (2026-10-05) — real files from public archives
+
+Seven more real historical place files were imported from
+`beagleded/Roblox-Places-Archive` (GitHub, public; the same archive that supplied Natural
+Disaster Survival). Import is performed by `tools/import_places.py`, which implements the
+intake rule end-to-end: candidate → quarantine → SHA-256 → parse → DB.
+
+| Game | Place file | Instances | Scripts | Notes |
+|---|---|---|---|---|
+| Contamination | `Contamination.rbxl` | 6,287 | 555 | no post-2013 markers in the file |
+| Base Wars | `Base Wars.rbxl` | 4,793 | 473 | no post-2013 markers in the file |
+| Happy Home in Robloxia | `Happy Home in Robloxia.rbxl` | 18,631 | 6 | post-2013 markers present |
+| Rocket Fight Advanced | `Rocket Fight Advanced.rbxl` | 370 | 81 | post-2013 markers present |
+| ROBLOX Battle | `ROBLOX Battle.rbxl` | 2,280 | 126 | post-2013 markers present |
+| Martian Invasion | `Martian Invasion.rbxl` | 8,723 | 256 | post-2013 markers present |
+| Building with Friends | `Building with Friends.rbxl` | 2,644 | 6 | post-2013 markers present |
+
+**Total library: 14 preserved games, 3,000+ scripts inventoried (never executed).**
+
+## Provenance policy for these seven (stricter, because the archive has no sidecars)
+
+- **Creator attribution: UNVERIFIED.** No sidecar metadata exists in this archive, so the
+  `games.creator` value is literally `unverified`. The site shows that. Nothing is guessed.
+- **Era is evidence, not a claim.** The importer records *in-file* evidence — the set of
+  classes/properties actually used (`FilteringEnabled`, `StreamingEnabled`, `BodyColors`,
+  `Animator`, `R15`, meshes, CSG…) — in the `.meta.json` sidecar under `EraEvidence`, next to
+  the SHA-256 of the exact bytes. No save date is claimed for any of them. An early byte-prefix
+  heuristic in the tool was rejected as unreliable and replaced by a scan of the whole parsed
+  tree before import.
+- Files that are visibly modern (post-2016 markers) are still marked as such rather than
+  presented as 2015-era copies.
+
+## Catalogue state and pending candidates
+
+`tools/import_places.py --state` prints the full candidate inventory (currently 124 files
+hashed from the archive, 7 imported). Candidates are ranked by in-file era evidence and size.
+Unported candidates remain **candidates** — never described as part of the library.
+
+```bash
+PYTHONPATH=server .venv/bin/python tools/import_places.py --discover DIR --repo "owner/repo"
+PYTHONPATH=server .venv/bin/python tools/import_places.py --state
+PYTHONPATH=server .venv/bin/python tools/import_places.py --import <candidate-id> [...]
+```
+
+## Playability statement (unchanged, now with a visual runtime)
+
+All 14 games are **parsed / metadata-ok / geometry-exported / BROWSER-TESTED as maps**. What
+that means precisely:
+
+- their **world geometry, colours, spawn points and lighting render** in the BLOXEN client
+  runtime, from the real file bytes (docs/CLIENT-RUNTIME.md)
+- their **Lua does not run**, so no game logic, rounds, disasters, tools or scoring exist
+- maps whose authoring keeps the world in `ServerStorage`/`ReplicatedStorage` (Flood Escape,
+  The Normal Elevator, Mad Games) show those parts **as saved in the file**, with the container
+  reported in the runtime menu and a toggle to hide them — because cloning them into the world
+  happens in script, which we do not run
+- **no game is claimed playable as a game.** The script-evaluation path (reviewed scripts →
+  sandboxed 2015-Lua runtime) remains future work.
+
+
+## 2015 additions and the attribution ladder (2026-10-05, later)
+
+Six further places were added from `LuaGunsX/RobloxRBXLArchive` because the archive
+labels them with real 2015 save windows, and four of them came with the archive's own
+sidecar metadata:
+
+| # | Place | Archive label | Attribution |
+|---|-------|---------------|-------------|
+| 15 | After The Flash — Sandstorm | December 2015 | none in archive (UNVERIFIED) |
+| 16 | F3X Building Game | 2015M build | none in archive (UNVERIFIED) |
+| 17 | Island III | 2015L build | none in archive (UNVERIFIED) |
+| 18 | The Plaza Karts | September 27th, 2015 | none in archive (UNVERIFIED) |
+| 19 | Vampire Hunters 2 | Beta 1.2, June 14th, 2015 | none in archive (UNVERIFIED) |
+| 20 | Flood Escape | January 19th, 2015, V1.6.2 | Crazyblox (archive sidecar) |
+
+**Corroboration event.** Three files already in the library turned out to share a SHA-256
+with LuaGunsX's dated copies: *Mad Games* (v1.3b, 2015), *The Normal Elevator*
+("Fixed for 2015M") and *Flood Escape* (V1.6.5, July 8th 2015). Two independent public
+archives holding byte-identical copies upgrades the *identity* evidence — it does not
+verify a save date. Those three moved from creator `unverified` to the creator the
+archive's sidecar names (loleris, NowDoTheHarlemShake, Crazyblox), recorded in the DB as
+attribution by the archive author, explicitly not verified against Roblox services.
+
+**Attribution ladder** (each rung is a claim of different strength; nothing here is
+independently verified):
+
+1. `UNVERIFIED` — no sidecar; only in-file era evidence.
+2. `ATTRIBUTED` — the archive's sidecar names a creator (this is what the three above
+   are). Recorded as such, never as fact.
+3. `FILENAME CLAIM` — a date in a filename ("July 8th, 2015"). Recorded as the archive
+   author's claim in every case, never used to date the build.
+4. In-file era evidence — binary format, class/property fingerprints. The strongest
+   *machine* signal available here, still an inference.
+
+Sidecar files are kept in `quarantine/places/` under three names, and the importer never
+overwrites one kind with another: `<name>.rbxl.meta.json` (the archive's metadata, carried
+verbatim), `<stem>.meta.json` (same for the curated/seeded set) and `<stem>.bloxen.json`
+(BLOXEN's own provenance record — SHA-256, source repo, era evidence, caveats).

@@ -15,15 +15,18 @@
                     {% else %}<div class="bloxen-thumb-missing" style="height:100%; line-height:330px;">place thumbnail MISSING — not fabricated</div>{% endif %}
                 </div>
                 <div style="padding:12px; text-align:center;">
-                    {% if user %}
-                    <form method="post" action="/play/start" style="display:inline;">
-                        <input type="hidden" name="game_id" value="{{ game.id }}" />
-                        <button type="submit" style="padding:8px 34px; font-size:16px; font-weight:600; color:#fff; background:linear-gradient(#3fbc3f,#2e9e2e); border:1px solid #2a8a2a; border-radius:6px; cursor:pointer;">
-                            Play
-                        </button>
-                    </form>
+                    {% if game.place_path %}
+                    <a href="/play/{{ game.id }}" style="padding:8px 34px; font-size:16px; font-weight:600; color:#fff; background:linear-gradient(#3fbc3f,#2e9e2e); border:1px solid #2a8a2a; border-radius:6px; text-decoration:none; display:inline-block;">
+                        ▶ Play
+                    </a>
+                    <div style="margin-top:8px; font-size:11px; color:#666; line-height:1.5;">
+                        Runs in your browser from the preserved place file (BLOXEN client runtime):
+                        real geometry, colours, spawn points and lighting. The place's Lua scripts are
+                        <b>not</b> executed, so scripted game logic does not run.
+                    </div>
                     {% else %}
-                    <a href="/Login.aspx" style="padding:8px 34px; font-size:16px; font-weight:600; color:#fff; background:linear-gradient(#3fbc3f,#2e9e2e); border:1px solid #2a8a2a; border-radius:6px; text-decoration:none; display:inline-block;">Play</a>
+                    <span style="padding:8px 34px; font-size:16px; color:#888; background:#eee; border:1px solid #ccc; border-radius:6px; display:inline-block;">Play</span>
+                    <div style="margin-top:8px; font-size:11px; color:#a05050;">no preserved place file — not playable</div>
                     {% endif %}
                     {% if user %}
                     <form method="post" action="/games/{{ game.id }}/favorite" style="display:inline; margin-left:8px;">

@@ -1,0 +1,18 @@
+{
+ "File": "Base Wars.rbxl",
+ "Source": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+ "SHA256": "44b13cd44f24f6db8e73ad2cedaa69805181c7d6876364fbaf5c93dd643dd298",
+ "Creator": "unverified",
+ "EraEvidence": {
+  "markers": [
+   "BodyColors",
+   "Terrain"
+  ],
+  "post_2013_markers": [
+   "BodyColors"
+  ],
+  "class_count": 73,
+  "basis": "full parsed class/property usage, not a claimed save date"
+ },
+ "ImportNote": "Imported by tools/import_places.py; scripts inventoried, never executed."
+}

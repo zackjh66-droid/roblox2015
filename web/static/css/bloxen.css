@@ -3,7 +3,97 @@
    (main___..._m.css / page___..._m.css). This file ONLY adds:
      1. the BLOXEN unofficial-preservation disclosure strip
      2. reconstruction placeholders where preserved imagery is missing
+     3. local font faces (the preserved CSS points at a dead Google Fonts CDN)
+     4. deliberate suppression of Roblox trademark image references
    It never overrides historical layout dimensions. */
+
+/* ---- 1. Source Sans Pro, served locally -----------------------------------
+   The 2015 bundles load Source Sans Pro from themes.googleusercontent.com
+   (protocol-relative URLs). That endpoint no longer serves these files, so the
+   same family is served from this server instead (SIL OFL 1.1, see
+   web/static/fonts/LICENSE-source-sans-pro.txt). Metrics match the historical
+   rendering because it is the same typeface. */
+@font-face {
+    font-family: "Source Sans Pro";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/static/fonts/source-sans-pro-latin-400-normal.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Source Sans Pro";
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url("/static/fonts/source-sans-pro-latin-300-normal.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Source Sans Pro";
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url("/static/fonts/source-sans-pro-latin-600-normal.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Source Sans Pro";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("/static/fonts/source-sans-pro-latin-700-normal.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Source Sans Pro";
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/static/fonts/source-sans-pro-latin-400-italic.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Source Sans Pro";
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url("/static/fonts/source-sans-pro-latin-600-normal.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Source Sans Pro";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("/static/fonts/source-sans-pro-latin-700-normal.woff2") format("woff2");
+}
+
+/* ---- 2. Trademark-neutral navigation -------------------------------------
+   The preserved bundle draws the Roblox logo ("R" mark) and the 2015 navigation
+   icon sprite. BLOXEN is an unofficial preservation project and does not
+   reproduce Roblox Corporation trademarks, so those background images are
+   suppressed and the BLOXEN wordmark is used instead (see below). The sprite is
+   still referenced for layout metrics only via width/height, which we keep. */
+.rbx-header .logo-transitional,
+.navbar-brand .logo,
+.navbar-brand .logo-transitional {
+    background-image: none !important;
+}
+.rbx-icon-nav-search,
+.rbx-icon-nav-search-white,
+.rbx-icon-nav-menu,
+.rbx-icon-nav-robux,
+.rbx-icon-nav-tix,
+.rbx-icon-nav-settings,
+.rbx-icon-nav-home,
+.rbx-icon-nav-profile,
+.rbx-icon-nav-message,
+.rbx-icon-nav-friends,
+.rbx-icon-nav-charactercustomizer,
+.rbx-icon-nav-inventory,
+.rbx-icon-nav-trade,
+.rbx-icon-nav-group,
+.rbx-icon-nav-forum,
+.rbx-icon-nav-blog,
+.rbx-icon-nav-shop,
+.rbx-icon-default-navigation {
+    background-image: none !important;
+}
 
 #bloxen-disclosure {
     background: #1d2c3f;
@@ -104,3 +194,19 @@ a.navbar-brand .bloxen-mark {
 .bloxen-item-row:hover { background: #f7f7f7; }
 
 body { background-color: #fff; }
+
+/* Play affordance on game cards (BLOXEN addition, not historical) */
+.bloxen-play {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 5px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(#3fbc3f, #2e9e2e);
+    border: 1px solid #2a8a2a;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.bloxen-play:hover { background: linear-gradient(#47c947, #33a833); }
+.bloxen-play-note { color: #888; font-size: 10.5px; margin-top: 3px; }

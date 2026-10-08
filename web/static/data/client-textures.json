@@ -1,0 +1,348 @@
+{
+ "_note": "Textures and sky are converted verbatim from the verified 2015 WindowsPlayer package (0.205.0.61876). No asset here is redrawn or approximated; missing materials stay missing.",
+ "client_version": "0.205.0.61876",
+ "materials": {
+  "plastic": {
+   "file": "textures/client/plastic.png",
+   "source_file": "PlatformContent/pc/textures/plastic/diffuse.dds",
+   "source_sha256": "23c185995087abbdc843134b5869b90ca8025b9c5e61276fc9c6a1d137dea6f7",
+   "source_format": "DDS/DXT5",
+   "source_size": [
+    128,
+    2048
+   ],
+   "size": [
+    128,
+    2048
+   ],
+   "source_is_flat_colour": false,
+   "atlas_cells": 16
+  },
+  "studs": {
+   "file": "textures/client/studs.png",
+   "source_file": "PlatformContent/pc/textures/studs.dds",
+   "source_sha256": "b528414e65d0ce08b90cac7a46a70d9117ae4827a0ec7e3178e6acc96bbe5dec",
+   "source_format": "DDS/DXT5",
+   "source_size": [
+    128,
+    2048
+   ],
+   "size": [
+    128,
+    2048
+   ],
+   "source_is_flat_colour": false,
+   "atlas_cells": 16
+  },
+  "brick": {
+   "file": "textures/client/brick.png",
+   "source_file": "PlatformContent/pc/textures/brick/diffuse.dds",
+   "source_sha256": "319cde65b6336866ba1db5d19b67e0cabd0a5870384f9b9a3431264d05a62495",
+   "source_format": "DDS/DXT5",
+   "source_size": [
+    512,
+    512
+   ],
+   "size": [
+    256,
+    256
+   ],
+   "source_is_flat_colour": false,
+   "atlas_cells": null
+  },
+  "wood": {
+   "file": "textures/client/wood.png",
+   "source_file": "PlatformContent/pc/textures/wood/diffuse.dds",
+   "source_sha256": "284b28add6070b8491031fcf418896ec8887acfde4af7e3b938b4e356c7696d0",
+   "source_format": "DDS/DXT5",
+   "source_size": [
+    1024,
+    1024
+   ],
+   "size": [
+    256,
+    256
+   ],
+   "source_is_flat_colour": false,
+   "atlas_cells": null
+  },
+  "woodplanks": {
+   "file": "textures/client/woodplanks.png",
+   "source_file": "PlatformContent/pc/textures/woodplanks/diffuse.dds",
+   "source_sha256": "b3110140bcaa1c697c0e9726a2a05fdeb4135bfeb96f2e107128b0f278ee154b",
+   "source_format": "DDS/DXT5",
+   "source_size": [
+    512,
+    512
+   ],
+   "size": [
+    256,
+    256
+   ],
+   "source_is_flat_colour": false,
+   "atlas_cells": null
+  },
+  "slate": {
+   "file": "textures/client/slate.png",
+   "source_file": "PlatformContent/pc/textures/slate/diffuse.dds",
+   "source_sha256": "332d08b0b6f40ec33c02c722ededbe6191fa6d241412aa1b0a744c3bbd1b6bed",
+   "source_format": "DDS/DXT5",
+   "source_size": [
+    1024,
+    1024
+   ],
+   "size": [
+    256,
+    256
+   ],
+   "source_is_flat_colour": false,
+   "atlas_cells": null
+  },
+  "cobblestone": {
+   "file": "textures/client/cobblestone.png",
+   "source_file": "PlatformContent/pc/textures/cobblestone/diffuse.dds",
+   "source_sha256": "d9ef8d83559c8903dfa56e515ed43019a46738cd5e5e24107fc01026a33ac0e6",
+   "source_format": "DDS/DXT5",
+   "source_size": [
+    1024,
+    1024
+   ],
+   "size": [
+    256,
+    256
+   ],
+   "source_is_flat_colour": false,
+   "atlas_cells": null
+  },
+  "concrete": {
+   "file": "textures/client/concrete.png",
+   "source_file": "PlatformContent/pc/textures/concrete/diffuse.dds",
+   "source_sha256": "c025d9a75e31eb708e5c43847a0bfb5b47fa26e242b3688b77c23fe2d3dc38e9",
+   "source_format": "DDS/DXT5",
+   "source_size": [
+    1024,
+    1024
+   ],
+   "size": [
+    256,
+    256
+   ],
+   "source_is_flat_colour": false,
+   "atlas_cells": null
+  },
+  "granite": {
+   "file": "textures/client/granite.png",
+   "source_file": "PlatformContent/pc/textures/granite/diffuse.dds",
+   "source_sha256": "01052db50f2c9ac2e81e81ebec19de37ec16036a5e582bc54326955036fb4c04",
+   "source_format": "DDS/DXT5",
+   "source_size": [
+    1024,
+    1024
+   ],
+   "size": [
+    256,
+    256
+   ],
+   "source_is_flat_colour": false,
+   "atlas_cells": null
+  },
+  "marble": {
+   "file": "textures/client/marble.png",
+   "source_file": "PlatformContent/pc/textures/marble/diffuse.dds",
+   "source_sha256": "36c408a3b2d140acaf70cdb9a3ed0cd484c98f8f873e19531a5543d23e8d2178",
+   "source_format": "DDS/DXT5",
+   "source_size": [
+    1024,
+    1024
+   ],
+   "size": [
+    256,
+    256
+   ],
+   "source_is_flat_colour": false,
+   "atlas_cells": null
+  },
+  "sand": {
+   "file": "textures/client/sand.png",
+   "source_file": "PlatformContent/pc/textures/sand/diffuse.dds",
+   "source_sha256": "76847aa43ec867948545633f2f28375d9807747aaebbcedb01353d9c688a0e94",
+   "source_format": "DDS/DXT5",
+   "source_size": [
+    1024,
+    1024
+   ],
+   "size": [
+    256,
+    256
+   ],
+   "source_is_flat_colour": false,
+   "atlas_cells": null
+  },
+  "fabric": {
+   "file": "textures/client/fabric.png",
+   "source_file": "PlatformContent/pc/textures/fabric/diffuse.dds",
+   "source_sha256": "3ce557fc68135d167e2c80b764e1f7c4ff4ff12089225bcc8d32c53b92476c16",
+   "source_format": "DDS/DXT5",
+   "source_size": [
+    512,
+    512
+   ],
+   "size": [
+    256,
+    256
+   ],
+   "source_is_flat_colour": false,
+   "atlas_cells": null
+  },
+  "rust": {
+   "file": "textures/client/rust.png",
+   "source_file": "PlatformContent/pc/textures/rust/diffuse.dds",
+   "source_sha256": "dd54bda4d36db43b3d6362742452a3e701d7425860ccd14136ea64cee734da1e",
+   "source_format": "DDS/DXT5",
+   "source_size": [
+    1024,
+    1024
+   ],
+   "size": [
+    256,
+    256
+   ],
+   "source_is_flat_colour": false,
+   "atlas_cells": null
+  },
+  "metal": {
+   "file": "textures/client/metal.png",
+   "source_file": "PlatformContent/pc/textures/metal/diffuse.dds",
+   "source_sha256": "14bee345bd3f6a15d5b6263118fa1426f5b58a2a431e628620af520863d51e72",
+   "source_format": "DDS/DXT5",
+   "source_size": [
+    512,
+    512
+   ],
+   "size": [
+    256,
+    256
+   ],
+   "source_is_flat_colour": false,
+   "atlas_cells": null
+  },
+  "aluminum": {
+   "file": "textures/client/aluminum.png",
+   "source_file": "PlatformContent/pc/textures/aluminum/diffuse.dds",
+   "source_sha256": "8552dc6e0cb6d92005d531258fdb0648f943c720eafff55b51659ec80b7c3e3c",
+   "source_format": "DDS/DXT5",
+   "source_size": [
+    4,
+    4
+   ],
+   "size": [
+    4,
+    4
+   ],
+   "source_is_flat_colour": true,
+   "atlas_cells": null
+  },
+  "diamondplate": {
+   "file": "textures/client/diamondplate.png",
+   "source_file": "PlatformContent/pc/textures/diamondplate/diffuse.dds",
+   "source_sha256": "4ba056bb0439992e7914c9a9b920df357a4112ab8d5313481861c14ea165d752",
+   "source_format": "DDS/DXT5",
+   "source_size": [
+    512,
+    512
+   ],
+   "size": [
+    256,
+    256
+   ],
+   "source_is_flat_colour": false,
+   "atlas_cells": null
+  },
+  "pebble": {
+   "file": "textures/client/pebble.png",
+   "source_file": "PlatformContent/pc/textures/pebble/diffuse.dds",
+   "source_sha256": "26585c06623fde7c3600b561b38180c54f1a3eeefb94310dc44cde03647d154e",
+   "source_format": "DDS/DXT5",
+   "source_size": [
+    512,
+    512
+   ],
+   "size": [
+    256,
+    256
+   ],
+   "source_is_flat_colour": false,
+   "atlas_cells": null
+  },
+  "grass": {
+   "file": "textures/client/grass.png",
+   "source_file": "PlatformContent/pc/textures/grass/diffuse.dds",
+   "source_sha256": "35769a729cc7dc2df8331b512821cac596efc38c8b195cf5f13f83e41f1ed1ed",
+   "source_format": "DDS/DXT5",
+   "source_size": [
+    512,
+    512
+   ],
+   "size": [
+    256,
+    256
+   ],
+   "source_is_flat_colour": false,
+   "atlas_cells": null
+  },
+  "ice": {
+   "file": "textures/client/ice.png",
+   "source_file": "PlatformContent/pc/textures/ice/diffuse.dds",
+   "source_sha256": "8552dc6e0cb6d92005d531258fdb0648f943c720eafff55b51659ec80b7c3e3c",
+   "source_format": "DDS/DXT5",
+   "source_size": [
+    4,
+    4
+   ],
+   "size": [
+    4,
+    4
+   ],
+   "source_is_flat_colour": true,
+   "atlas_cells": null
+  }
+ },
+ "sky": {
+  "up": {
+   "file": "textures/client/sky/up.jpg",
+   "source_file": "content/sky/null_plainsky512_up.jpg",
+   "source_sha256": "2ea0460c98fe5add8114be9d0c6d42ec55235eaefb3a34129e7a47b6669106e5"
+  },
+  "dn": {
+   "file": "textures/client/sky/dn.jpg",
+   "source_file": "content/sky/null_plainsky512_dn.jpg",
+   "source_sha256": "affac8bf1e376a3d6768bd6f1d1d13715165057f3fb3f79dcd86794ca49cab20"
+  },
+  "lf": {
+   "file": "textures/client/sky/lf.jpg",
+   "source_file": "content/sky/null_plainsky512_lf.jpg",
+   "source_sha256": "4dd049c65c5f801de5fd443f162ad8751db38d235cadcec88198be809a7b26fa"
+  },
+  "rt": {
+   "file": "textures/client/sky/rt.jpg",
+   "source_file": "content/sky/null_plainsky512_rt.jpg",
+   "source_sha256": "bdca1cde3f8be8d328cc63b3832d4c10719d2e6d12595d6e1bc29b772de81cb7"
+  },
+  "ft": {
+   "file": "textures/client/sky/ft.jpg",
+   "source_file": "content/sky/null_plainsky512_ft.jpg",
+   "source_sha256": "721f13db9b006cd06b99403f945f5f11b89c437e79723ad3e52038e403d6715c"
+  },
+  "bk": {
+   "file": "textures/client/sky/bk.jpg",
+   "source_file": "content/sky/null_plainsky512_bk.jpg",
+   "source_sha256": "85890ec51041e1cd9b7ba41f8f64d093a4896928a1950fdc57157cbda6a69d57"
+  },
+  "_wrapping": "CubeTexture faces: up, dn, lf, rt, ft, bk (2015 default sky)"
+ },
+ "client_manifest": {
+  "exe_sha256": "384a4cb38de6977899e09e59c2136619fef521dc7b4adeb34d404945120c8a44",
+  "pe_timestamp_utc": "2015-07-23T19:45:30+00:00",
+  "file_version": "0.205.0.61876"
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "File": "Martian Invasion.rbxl",
+ "Source": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+ "SHA256": "44cdda80ef199e9fd051a9472cec9c470343cb89af6ab08b0bf2b051f2288c4c",
+ "Creator": "unverified",
+ "EraEvidence": {
+  "markers": [
+   "BodyColors",
+   "Terrain"
+  ],
+  "post_2013_markers": [
+   "BodyColors"
+  ],
+  "class_count": 49,
+  "basis": "full parsed class/property usage, not a claimed save date"
+ },
+ "ImportNote": "Imported by tools/import_places.py; scripts inventoried, never executed."
+}

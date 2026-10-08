@@ -79,3 +79,26 @@ Corrections made from comparison:
 
 Every template footer states the reconstruction nature; per-page provenance tags appear in
 page bodies (`bloxen-provenance-tag`). Nothing reconstructed is labeled original.
+
+---
+
+# Play flow and browser client (2026-10-05)
+
+The historical place page's **Play** button now leads to a working runtime:
+
+| Route | Behaviour |
+|---|---|
+| `POST /play/start` | redirects to `/play/{game_id}` (keeps the historical form action working) |
+| `GET /play/{game_id}` | the BLOXEN client runtime page (3D viewport + 2015-style HUD) |
+| `GET /api/place/{game_id}/geometry` | real geometry from the preserved place file (gzip; cached) |
+| `GET /api/place/{game_id}/scripts` | inert script inventory shown in the runtime menu |
+| `GET /asset/{id}` | recovered historical asset (404 + MISSING otherwise) |
+| `GET /images/{path}` | 1×1 transparent placeholder + `X-Bloxen-Asset-Status: MISSING` |
+| `GET /api/health`, `/api/games`, `/api/catalog`, `/api/play/ticket`, `/api/play/validate` | unchanged |
+
+The tile-engine launch flow is untouched: login → `POST /api/play/ticket` (single-use, 120 s)
+→ `bloxen-player:` URI → `/api/play/validate`. The browser runtime is the alternative path for
+someone who has no 2015 client installed.
+
+Game cards on `/games` and the place page now state whether a preserved place file exists;
+games without a file are labelled *"no place file — not playable"* and never get a fake Play.

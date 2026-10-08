@@ -1,0 +1,18 @@
+{
+ "File": "Contamination.rbxl",
+ "Source": "beagleded/Roblox-Places-Archive (github.com/beagleded/Roblox-Places-Archive)",
+ "SHA256": "52863692d9672c9275d7ce3a78ad8ffff15b2ac4b0c3696a5d41b5b1a991a3f0",
+ "Creator": "unverified",
+ "EraEvidence": {
+  "markers": [
+   "BodyColors",
+   "Terrain"
+  ],
+  "post_2013_markers": [
+   "BodyColors"
+  ],
+  "class_count": 61,
+  "basis": "full parsed class/property usage, not a claimed save date"
+ },
+ "ImportNote": "Imported by tools/import_places.py; scripts inventoried, never executed."
+}

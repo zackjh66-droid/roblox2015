@@ -79,3 +79,24 @@ labeled REAL-CLIENT-TESTED.
 
 These observations override simulator convenience (rule enforced in
 `server/bloxen/gameserver/replicator.py`).
+
+---
+
+# Browser client runtime (2026-10-05)
+
+A separate, clearly-labelled runtime now renders the preserved place files in a browser:
+**docs/CLIENT-RUNTIME.md**. It is *not* the Windows Player and is not claimed to be; it consumes
+the same real place files and labels real vs reconstructed features in-experience.
+
+Status ladder for it: `parsed` → `geometry-exported` → **BROWSER-TESTED** (14/14 games, zero
+JS/HTTP errors, headless Chromium evidence). The Windows player path below remains
+**BLOCKED** and nothing in BLOXEN is REAL-CLIENT-TESTED.
+
+Two open items discovered while building it are recorded in CLIENT-RUNTIME.md §7 — the most
+important being that **wedge part orientation could not be resolved from evidence**
+(statistical test on 7.1k wedge parts was inconclusive), so the runtime ships a flip toggle
+instead of a claim.
+
+## Patch labeling (docs §10)
+
+The client binary is **patched** (one-byte change at file offset `0x538c1`: `6a01` → `6a00` in `RCCService.exe`, sha256 changed from `384a4cb38de6977899e09e59c2136619fef521dc7b4adeb34d404945120c8a44` to `02254587...`). This patch was applied to enable the join script and hash check bypass. All run logs and documentation record this as `clean -> patched`; the unmodified client is never presented.

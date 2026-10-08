@@ -1,0 +1,23 @@
+{
+ "File": "Flood Escape (July 8th, 2015, V1.6.5).rbxl",
+ "Source": "LuaGunsX/RobloxRBXLArchive (github.com/LuaGunsX/RobloxRBXLArchive)",
+ "SHA256": "c247b43836ab033db53b85551e193aefcac81937d1881857f08eb6d6fd58df59",
+ "Creator": "unverified",
+ "FilenameDateClaim": "July 8th, 2015",
+ "ArchiveAttributedCreator": "Crazyblox",
+ "EraEvidence": {
+  "markers": [
+   "FilteringEnabled",
+   "StreamingEnabled",
+   "Terrain",
+   "UnionOperation"
+  ],
+  "post_2013_markers": [
+   "FilteringEnabled",
+   "StreamingEnabled"
+  ],
+  "class_count": 103,
+  "basis": "full parsed class/property usage, not a claimed save date"
+ },
+ "ImportNote": "Imported by tools/import_places.py; scripts inventoried, never executed."
+}
